@@ -1786,7 +1786,108 @@ git clone --single-branch --depth 1 \
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · 비교</span></div><div class="pagenum">54</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · 기능별 명령</span></div><div class="pagenum">54</div></div>
+    <div class="eyebrow">Superpowers · gstack</div>
+    <h2 class="display" style="margin-bottom: 4px;">기능별</h2>
+    <p style="color: var(--muted); margin-bottom: 10px; font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.08em;"><span style="color: var(--rust);">github.com/obra/superpowers</span> <span style="color:var(--muted);"> · </span> <span style="color: var(--forest);">github.com/garrytan/gstack</span></p>
+
+    <table class="tbl" style="font-size: 12.5px;">
+      <thead>
+        <tr>
+          <th style="width:10%; color: var(--muted); padding: 8px 12px;">단계</th>
+          <th style="width:28%; color: var(--ink-soft); padding: 8px 12px;">기능</th>
+          <th style="width:31%; color: var(--rust); padding: 8px 12px;">Superpowers</th>
+          <th style="width:31%; color: var(--forest); padding: 8px 12px;">gstack</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="3" style="font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.22em; color: var(--rust); text-transform: uppercase; vertical-align: middle; padding: 6px 12px;">Plan</td>
+          <td style="padding: 6px 12px;">설계 정제 · Socratic</td>
+          <td style="padding: 6px 12px;"><code style="font-family: var(--mono); color: var(--rust);">/brainstorm</code></td>
+          <td style="padding: 6px 12px;"><code style="font-family: var(--mono); color: var(--forest);">/office-hours</code></td>
+        </tr>
+        <tr>
+          <td style="padding: 6px 12px;">계획 작성 · 검토</td>
+          <td style="padding: 6px 12px;"><code style="font-family: var(--mono); color: var(--rust);">/write-plan</code></td>
+          <td style="padding: 6px 12px;"><code style="font-family: var(--mono); color: var(--forest);">/plan-ceo-review</code> · <code style="font-family: var(--mono); color: var(--forest);">/plan-eng-review</code></td>
+        </tr>
+        <tr>
+          <td style="padding: 6px 12px;">자동 통합 계획</td>
+          <td style="padding: 6px 12px; color: var(--line);">—</td>
+          <td style="padding: 6px 12px;"><code style="font-family: var(--mono); color: var(--forest);">/autoplan</code></td>
+        </tr>
+
+        <tr>
+          <td rowspan="2" style="font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.22em; color: var(--rust); text-transform: uppercase; vertical-align: middle; padding: 6px 12px;">Build</td>
+          <td style="padding: 6px 12px;">병렬 실행</td>
+          <td style="padding: 6px 12px;"><code style="font-family: var(--mono); color: var(--rust);">/execute-plan</code></td>
+          <td style="padding: 6px 12px; color: var(--line);">—</td>
+        </tr>
+        <tr>
+          <td style="padding: 6px 12px;">TDD 사이클</td>
+          <td style="padding: 6px 12px;"><code style="font-family: var(--mono); color: var(--forest); font-size: 11px;">using-test-driven-development</code> <span style="font-size:10px;color:var(--muted);">auto</span></td>
+          <td style="padding: 6px 12px; color: var(--line);">—</td>
+        </tr>
+
+        <tr>
+          <td rowspan="4" style="font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.22em; color: var(--rust); text-transform: uppercase; vertical-align: middle; padding: 6px 12px;">Verify</td>
+          <td style="padding: 6px 12px;">코드 리뷰</td>
+          <td style="padding: 6px 12px;">execute-plan 내부 <span style="font-size:10px;color:var(--muted);">auto</span></td>
+          <td style="padding: 6px 12px;"><code style="font-family: var(--mono); color: var(--forest);">/review</code></td>
+        </tr>
+        <tr>
+          <td style="padding: 6px 12px;">디버깅</td>
+          <td style="padding: 6px 12px;"><code style="font-family: var(--mono); color: var(--forest); font-size: 11px;">debugging-with-the-scientific-method</code> <span style="font-size:10px;color:var(--muted);">auto</span></td>
+          <td style="padding: 6px 12px;"><code style="font-family: var(--mono); color: var(--forest);">/investigate</code></td>
+        </tr>
+        <tr>
+          <td style="padding: 6px 12px;">브라우저 QA</td>
+          <td style="padding: 6px 12px; color: var(--line);">—</td>
+          <td style="padding: 6px 12px;"><code style="font-family: var(--mono); color: var(--forest);">/qa</code> · <code style="font-family: var(--mono); color: var(--forest);">/browse</code></td>
+        </tr>
+        <tr>
+          <td style="padding: 6px 12px;">보안 검토</td>
+          <td style="padding: 6px 12px; color: var(--line);">—</td>
+          <td style="padding: 6px 12px;"><code style="font-family: var(--mono); color: var(--forest);">/cso</code></td>
+        </tr>
+
+        <tr>
+          <td rowspan="2" style="font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.22em; color: var(--rust); text-transform: uppercase; vertical-align: middle; padding: 6px 12px;">Ship</td>
+          <td style="padding: 6px 12px;">릴리스 · 배포</td>
+          <td style="padding: 6px 12px; color: var(--line);">—</td>
+          <td style="padding: 6px 12px;"><code style="font-family: var(--mono); color: var(--forest);">/ship</code> · <code style="font-family: var(--mono); color: var(--forest);">/land-and-deploy</code></td>
+        </tr>
+        <tr>
+          <td style="padding: 6px 12px;">안전망</td>
+          <td style="padding: 6px 12px; color: var(--line);">—</td>
+          <td style="padding: 6px 12px;"><code style="font-family: var(--mono); color: var(--forest);">/careful</code> · <code style="font-family: var(--mono); color: var(--forest);">/freeze</code> · <code style="font-family: var(--mono); color: var(--forest);">/guard</code></td>
+        </tr>
+
+        <tr>
+          <td rowspan="2" style="font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.22em; color: var(--rust); text-transform: uppercase; vertical-align: middle; padding: 6px 12px;">Reflect</td>
+          <td style="padding: 6px 12px;">회고</td>
+          <td style="padding: 6px 12px; color: var(--line);">—</td>
+          <td style="padding: 6px 12px;"><code style="font-family: var(--mono); color: var(--forest);">/retro</code></td>
+        </tr>
+        <tr>
+          <td style="padding: 6px 12px;">컨텍스트 저장 · 복원</td>
+          <td style="padding: 6px 12px; color: var(--line);">—</td>
+          <td style="padding: 6px 12px;"><code style="font-family: var(--mono); color: var(--forest);">/context-save</code> · <code style="font-family: var(--mono); color: var(--forest);">/context-restore</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout" style="margin-top: 10px; padding: 8px 14px;">
+      <div class="label">범례</div>
+      <div class="text" style="font-size: 12.5px;">SP 슬래시는 <code style="color: var(--muted); font-family: var(--mono); font-size: 11px;">/superpowers:</code> prefix 생략 표기 <span style="color:var(--muted);"> · </span> <span style="font-size:10px; color: var(--muted); letter-spacing:0.1em;">auto</span> = 자동 발동 <span style="color:var(--muted);"> · </span> <span style="color: var(--line);">—</span> = 없음</div>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="inner">
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · 비교</span></div><div class="pagenum">55</div></div>
     <div class="eyebrow">Superpowers vs gstack — 성격이 다르다</div>
     <h2 class="display" style="margin-bottom: 12px;">방법론을 코드로 강제 <span style="color:var(--muted); font-weight:400; font-style:italic;">vs</span> 가상 개발 팀</h2>
 
@@ -1847,7 +1948,76 @@ git clone --single-branch --depth 1 \
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · 실습 ② · 통합 흐름</span></div><div class="pagenum">55</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · 활성화 메커니즘</span></div><div class="pagenum">56</div></div>
+    <div class="eyebrow">Plugin Ecosystem · 활성화</div>
+    <h2 class="display" style="margin-bottom: 6px;">Plugin <span style="color:var(--muted); font-weight:400;">·</span> Slash <span style="color:var(--muted); font-weight:400;">·</span> Skill <span style="color:var(--muted); font-weight:400;">·</span> Hook</h2>
+    <p class="lead" style="margin-bottom: 18px;"><em class="italic accent-rust">명시 2단</em> <span style="color:var(--muted);"> · </span> <em class="italic accent-forest">자동 2단</em></p>
+
+    <div class="grid-2" style="gap: 14px; flex: none;">
+      <div style="padding: 14px 18px; background: var(--paper-2); border-top: 3px solid var(--rust);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;">
+          <div class="eyebrow">① 명시 · 1회</div>
+          <span style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; color: var(--rust);">SETUP</span>
+        </div>
+        <h4 class="display" style="margin-bottom: 6px;">Plugin 설치</h4>
+        <ul style="font-size: 13px; line-height: 1.65; color: var(--ink-soft); padding-left: 16px; margin-bottom: 8px;">
+          <li>marketplace 등록</li>
+          <li>이후 세션 영구 적용</li>
+        </ul>
+        <code style="font-family: var(--mono); font-size: 11px; color: var(--rust); background: var(--paper-3); padding: 3px 6px;">/plugin install superpowers@...</code>
+      </div>
+
+      <div style="padding: 14px 18px; background: var(--paper-2); border-top: 3px solid var(--rust);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;">
+          <div class="eyebrow">② 명시 · 매번</div>
+          <span style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; color: var(--rust);">TRIGGER</span>
+        </div>
+        <h4 class="display" style="margin-bottom: 6px;">Slash Command</h4>
+        <ul style="font-size: 13px; line-height: 1.65; color: var(--ink-soft); padding-left: 16px; margin-bottom: 8px;">
+          <li>사용자 직접 입력</li>
+          <li>페르소나 전환 · 진입점</li>
+          <li>gstack 23 · Superpowers 3</li>
+        </ul>
+        <code style="font-family: var(--mono); font-size: 11px; color: var(--rust); background: var(--paper-3); padding: 3px 6px;">/plan-ceo-review · /execute-plan</code>
+      </div>
+
+      <div style="padding: 14px 18px; background: var(--paper-2); border-top: 3px solid var(--forest);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;">
+          <div class="eyebrow forest">③ 자동 · 맥락</div>
+          <span style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; color: var(--forest);">DISCOVER</span>
+        </div>
+        <h4 class="display" style="margin-bottom: 6px;">Skill 자동 발견</h4>
+        <ul style="font-size: 13px; line-height: 1.65; color: var(--ink-soft); padding-left: 16px; margin-bottom: 8px;">
+          <li>SKILL.md description 매칭</li>
+          <li>작업 맥락 감지 시 로드</li>
+        </ul>
+        <code style="font-family: var(--mono); font-size: 11px; color: var(--forest); background: var(--paper-3); padding: 3px 6px;">"TDD로" → using-test-driven-development</code>
+      </div>
+
+      <div style="padding: 14px 18px; background: var(--paper-2); border-top: 3px solid var(--forest);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;">
+          <div class="eyebrow forest">④ 자동 · 이벤트</div>
+          <span style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; color: var(--forest);">HOOK</span>
+        </div>
+        <h4 class="display" style="margin-bottom: 6px;">Hook · SessionStart</h4>
+        <ul style="font-size: 13px; line-height: 1.65; color: var(--ink-soft); padding-left: 16px; margin-bottom: 8px;">
+          <li>이벤트 트리거 (세션·도구 사용)</li>
+          <li>Superpowers — 컨텍스트 자동 주입</li>
+        </ul>
+        <code style="font-family: var(--mono); font-size: 11px; color: var(--forest); background: var(--paper-3); padding: 3px 6px;">SessionStart · PostToolUse · PreCompact</code>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 14px;">
+      <div class="label">Proactive Suggestion</div>
+      <div class="text">슬래시 = 명시 호출 <span style="color:var(--muted);">/</span> 슬래시 안의 하위 스킬 = 자동 발견 <span style="color:var(--muted);">/</span> 단계 감지 후 제안도 자동</div>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="inner">
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · 실습 ② · 통합 흐름</span></div><div class="pagenum">57</div></div>
     <div class="practice-meta">
       <span class="pill">실습 ②</span>
       <span class="pill tool">Claude Code</span>
@@ -1917,7 +2087,7 @@ git clone --single-branch --depth 1 \
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · 실습 ② · STEP 01</span></div><div class="pagenum">56</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · 실습 ② · STEP 01</span></div><div class="pagenum">58</div></div>
     <div class="practice-meta">
       <span class="pill">실습 ②</span>
       <span class="pill tool">STEP 01 · 셋업</span>
@@ -1982,7 +2152,7 @@ git clone --single-branch --depth 1 \
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · 실습 ② · STEP 02</span></div><div class="pagenum">57</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · 실습 ② · STEP 02</span></div><div class="pagenum">59</div></div>
     <div class="practice-meta">
       <span class="pill">실습 ②</span>
       <span class="pill tool">STEP 02 · 설계</span>
@@ -2065,7 +2235,7 @@ git clone --single-branch --depth 1 \
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · 실습 ② · STEP 03</span></div><div class="pagenum">58</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · 실습 ② · STEP 03</span></div><div class="pagenum">60</div></div>
     <div class="practice-meta">
       <span class="pill">실습 ②</span>
       <span class="pill tool">STEP 03 · 계획</span>
@@ -2147,7 +2317,7 @@ git clone --single-branch --depth 1 \
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · 실습 ② · STEP 04</span></div><div class="pagenum">59</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · 실습 ② · STEP 04</span></div><div class="pagenum">61</div></div>
     <div class="practice-meta">
       <span class="pill">실습 ②</span>
       <span class="pill tool">STEP 04 · 빌드</span>
@@ -2233,7 +2403,7 @@ git clone --single-branch --depth 1 \
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · 실습 ② · STEP 05</span></div><div class="pagenum">60</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · 실습 ② · STEP 05</span></div><div class="pagenum">62</div></div>
     <div class="practice-meta">
       <span class="pill">실습 ②</span>
       <span class="pill tool">STEP 05 · 검증·배포</span>
@@ -2297,7 +2467,7 @@ gh repo create my-app --public --source=. --push
 
 <section class="slide layout-divider">
   <div class="inner">
-    <div class="strip invert"><div class="left"><span class="dot"></span><span>Module Four</span></div><div class="pagenum">61</div></div>
+    <div class="strip invert"><div class="left"><span class="dot"></span><span>Module Four</span></div><div class="pagenum">63</div></div>
     <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
       <div class="divider-no">04</div>
       <div class="divider-label">Part Four · 멀티 에이전트</div>
@@ -2308,7 +2478,7 @@ gh repo create my-app --public --source=. --push
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>멘탈 모델 · 확장</span></div><div class="pagenum">62</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>멘탈 모델 · 확장</span></div><div class="pagenum">64</div></div>
     <div class="eyebrow">비유 확장 · 1명 → 팀</div>
     <h2 class="display" style="margin-bottom: 18px;">신입사원 1명 → 부서·팀</h2>
     <div class="grid-2" style="gap: 22px;">
@@ -2332,7 +2502,7 @@ gh repo create my-app --public --source=. --push
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 역할 분담</span></div><div class="pagenum">63</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 역할 분담</span></div><div class="pagenum">65</div></div>
     <div class="eyebrow">실제 스타트업 개발팀 ↔ 에이전트 매핑</div>
     <h2 class="display" style="margin-bottom: 18px;">5명의 역할을 그대로</h2>
     <table class="tbl">
@@ -2372,7 +2542,7 @@ gh repo create my-app --public --source=. --push
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 흐름</span></div><div class="pagenum">64</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 흐름</span></div><div class="pagenum">66</div></div>
     <div class="eyebrow">한 사이클</div>
     <h2 class="display" style="margin-bottom: 14px;">아이디어 → 배포까지 5단계</h2>
 
@@ -2425,7 +2595,7 @@ gh repo create my-app --public --source=. --push
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · Plan Mode</span></div><div class="pagenum">65</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · Plan Mode</span></div><div class="pagenum">67</div></div>
     <div class="eyebrow">Tip · /plan 의 진짜 가치</div>
     <h2 class="display" style="margin-bottom: 14px;">탐색 ≠ 수정</h2>
     <p class="body lg" style="margin-bottom: 14px;">Plan Mode는 <em class="italic">읽기 전용</em>입니다. 코드베이스를 분석해서 <em class="italic accent-rust">계획서</em>를 내놓고 <em class="italic">사람의 승인을 기다립니다</em>. 한 줄도 수정 안 함.</p>
@@ -2446,7 +2616,7 @@ gh repo create my-app --public --source=. --push
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · Sub-agents</span></div><div class="pagenum">66</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · Sub-agents</span></div><div class="pagenum">68</div></div>
     <div class="eyebrow">Tip · 컨텍스트 분리</div>
     <h2 class="display" style="margin-bottom: 14px;">서브 에이전트가 곧 개발팀원</h2>
     <p class="body lg" style="margin-bottom: 14px;">각 sub-agent는 <em class="italic">독립된 컨텍스트 윈도우</em>를 가집니다. 부모 에이전트는 결과만 받음 — 컨텍스트 오염 없음.</p>
@@ -2471,7 +2641,7 @@ gh repo create my-app --public --source=. --push
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 비용</span></div><div class="pagenum">67</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 비용</span></div><div class="pagenum">69</div></div>
     <div class="eyebrow">2026년 5월 기준 토큰당 가격</div>
     <h2 class="display" style="margin-bottom: 18px;">각 모델의 가격과 특성</h2>
     <table class="tbl">
@@ -2510,7 +2680,7 @@ gh repo create my-app --public --source=. --push
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 모델 선택</span></div><div class="pagenum">68</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 모델 선택</span></div><div class="pagenum">70</div></div>
     <div class="eyebrow">실전 팁 · 모델 라우팅</div>
     <h2 class="display" style="margin-bottom: 18px;">싼 모델을 기본으로, 비싼 모델은 필요할 때만</h2>
 
@@ -2548,7 +2718,7 @@ gh repo create my-app --public --source=. --push
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 실전 팁</span></div><div class="pagenum">69</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 실전 팁</span></div><div class="pagenum">71</div></div>
     <div class="eyebrow">실전 팁 · Plan Mode</div>
     <h2 class="display" style="margin-bottom: 14px;">Plan Mode는 <em class="italic accent-rust">거의 무료</em></h2>
     <p class="body lg" style="margin-bottom: 14px;">Plan Mode는 <em class="italic">읽기 전용 + 짧은 산출물</em>입니다. 입력 토큰만 발생하고, 출력은 계획서 한 장. <em class="italic accent-rust">출력 토큰 부담이 현저히 적습니다</em>.</p>
@@ -2578,7 +2748,7 @@ gh repo create my-app --public --source=. --push
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 함정</span></div><div class="pagenum">70</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 함정</span></div><div class="pagenum">72</div></div>
     <div class="eyebrow">자주 빠지는 함정 5가지</div>
     <h2 class="display" style="margin-bottom: 14px;">멀티 에이전트 ≠ 만능</h2>
     <div class="checklist">
@@ -2597,7 +2767,7 @@ gh repo create my-app --public --source=. --push
 
 <section class="slide layout-divider">
   <div class="inner">
-    <div class="strip invert"><div class="left"><span class="dot"></span><span>Module Five</span></div><div class="pagenum">71</div></div>
+    <div class="strip invert"><div class="left"><span class="dot"></span><span>Module Five</span></div><div class="pagenum">73</div></div>
     <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
       <div class="divider-no">05</div>
       <div class="divider-label">Part Five · 메인 실습</div>
@@ -2608,7 +2778,7 @@ gh repo create my-app --public --source=. --push
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 흐름</span></div><div class="pagenum">72</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 흐름</span></div><div class="pagenum">74</div></div>
     <div class="eyebrow">실습 흐름</div>
     <h2 class="display" style="margin-bottom: 18px;">Claude Code 보일러플레이트 → Codex 멀티에이전트 → 배포 → OAuth</h2>
 
@@ -2639,7 +2809,7 @@ gh repo create my-app --public --source=. --push
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 프로젝트</span></div><div class="pagenum">73</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 프로젝트</span></div><div class="pagenum">75</div></div>
     <div class="eyebrow">단일 프로젝트 — 모두 동일</div>
     <h2 class="display" style="margin-bottom: 14px;">네이버 카페-style 게시판</h2>
     <p class="body lg" style="color: var(--ink-soft); margin-bottom: 18px;">한 세션에 완성 가능한 <em class="italic">CRUD + 인증</em> — 그 위에 OAuth를 얹는 구조</p>
@@ -2674,7 +2844,7 @@ gh repo create my-app --public --source=. --push
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 사전 제작</span></div><div class="pagenum">74</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 사전 제작</span></div><div class="pagenum">76</div></div>
     <div class="practice-meta">
       <span class="pill" style="background: var(--forest); color: white;">Stage A · 사전 제작</span>
       <span class="pill tool">Claude Code</span>
@@ -2719,7 +2889,62 @@ codex    <em style="color:#9CA89F;"># 같은 폴더에서 Codex 시작 — Stage
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · Codex 시작</span></div><div class="pagenum">75</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · DB 셋업</span></div><div class="pagenum">77</div></div>
+    <div class="practice-meta">
+      <span class="pill" style="background: var(--forest); color: white;">Stage A · 사전 제작</span>
+      <span class="pill tool">Vercel ↔ Neon · 자동 연결</span>
+    </div>
+    <h3 class="display" style="margin-bottom: 6px;">Neon — Vercel Storage 통합 1회 자동 연결</h3>
+    <p class="body" style="color: var(--ink-soft); margin-bottom: 14px;">환경변수 자동 등록 · <code style="font-family: var(--mono); font-size: 12px;">vercel env pull</code>로 로컬 동기화 · 무료 0.5GB</p>
+
+    <div class="num-list" style="flex: none; gap: 6px;">
+      <div class="item" style="align-items: start; grid-template-columns: 42px 1fr;">
+        <div class="n" style="font-size: 32px;">01</div>
+        <div>
+          <div class="t" style="font-size: 17px;">Vercel Project → <strong>Storage</strong> 탭 → Browse Marketplace → <strong>Neon</strong></div>
+          <div class="d" style="font-size: 12.5px;">프로젝트 import 후 한 번만 설정 — 이후 모든 환경에 자동 적용</div>
+        </div>
+      </div>
+      <div class="item" style="align-items: start; grid-template-columns: 42px 1fr;">
+        <div class="n" style="font-size: 32px;">02</div>
+        <div>
+          <div class="t" style="font-size: 17px;">Create Database · <strong>region: Singapore · Plan: Free</strong></div>
+          <div class="d" style="font-size: 12.5px;">한국 latency 최적 · Postgres 16 default · scale-to-zero</div>
+        </div>
+      </div>
+      <div class="item" style="align-items: start; grid-template-columns: 42px 1fr;">
+        <div class="n" style="font-size: 32px;">03</div>
+        <div>
+          <div class="t" style="font-size: 17px;">자동 생성 환경변수 (Vercel에서 확인)</div>
+          <div class="d" style="font-size: 11.5px; font-family: var(--mono); line-height: 1.55;">POSTGRES_PRISMA_URL          <em style="color:#9CA89F;"># Pooled · 일반 쿼리</em><br>POSTGRES_URL_NON_POOLING     <em style="color:#9CA89F;"># Direct · 마이그레이션</em><br>+ POSTGRES_USER · POSTGRES_HOST 등 부가 6개</div>
+        </div>
+      </div>
+      <div class="item" style="align-items: start; grid-template-columns: 42px 1fr;">
+        <div class="n" style="font-size: 32px;">04</div>
+        <div>
+          <div class="t" style="font-size: 17px;"><code style="font-family: var(--mono); font-size: 13px;">vercel env pull .env.local</code> → 로컬 동기화</div>
+          <div class="d" style="font-size: 12.5px;">Vercel CLI가 모든 환경변수를 한 번에 다운로드 · 수동 복사 불필요</div>
+        </div>
+      </div>
+      <div class="item" style="align-items: start; grid-template-columns: 42px 1fr;">
+        <div class="n" style="font-size: 32px;">05</div>
+        <div>
+          <div class="t" style="font-size: 17px;"><code style="font-family: var(--mono); font-size: 13px;">npx prisma migrate dev</code> → 테이블 생성</div>
+          <div class="d" style="font-size: 12.5px;">schema.prisma의 env() 참조에 맞춰 마이그레이션 실행 · 셋업 완료</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 10px; padding: 8px 14px;">
+      <div class="label">Fallback · 변수 규칙</div>
+      <div class="text" style="font-size: 12.5px;">Storage 자동 안 될 때 → <code style="font-family: var(--mono); font-size: 12px; color: var(--forest);">pnpm dlx vercel install neon</code> <span style="color: var(--muted);">(npx 동일)</span> <span style="color:var(--muted);"> · </span> 변수 이름 자유 — <code style="font-family: var(--mono); font-size: 11.5px;">schema.prisma</code>의 <code style="font-family: var(--mono); font-size: 11.5px;">env()</code> 참조와 일치만 시키면 됨</div>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="inner">
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · Codex 시작</span></div><div class="pagenum">78</div></div>
     <div class="practice-meta">
       <span class="pill">Stage B · 본 실습</span>
       <span class="pill tool">Codex + Superpowers</span>
@@ -2756,7 +2981,7 @@ prd.md, prisma/schema.prisma를 읽고 무엇이 이미 돼있고
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 플랜</span></div><div class="pagenum">76</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 플랜</span></div><div class="pagenum">79</div></div>
     <div class="practice-meta">
       <span class="pill">Stage B</span>
       <span class="pill tool">/superpowers:write-plan</span>
@@ -2797,7 +3022,7 @@ prd.md, prisma/schema.prisma를 읽고 무엇이 이미 돼있고
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 멀티에이전트</span></div><div class="pagenum">77</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 멀티에이전트</span></div><div class="pagenum">80</div></div>
     <div class="practice-meta">
       <span class="pill">Stage B</span>
       <span class="pill tool">/superpowers:execute-plan</span>
@@ -2837,7 +3062,43 @@ prd.md, prisma/schema.prisma를 읽고 무엇이 이미 돼있고
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 검증</span></div><div class="pagenum">78</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 자동 호출 체인</span></div><div class="pagenum">81</div></div>
+    <div class="practice-meta">
+      <span class="pill">Stage B · 깊이</span>
+      <span class="pill tool">execute-plan 내부</span>
+    </div>
+    <h3 class="display" style="margin-bottom: 6px;">슬래시 1줄 → 스킬 8+ 자동 발동</h3>
+    <p class="body" style="color: var(--ink-soft); margin-bottom: 14px;">SessionStart 컨텍스트 + SKILL.md description 매칭 · 사용자가 안 부른 스킬도 작업 맥락 맞으면 자동 활성</p>
+
+    <div class="prompt-box" style="font-size: 11.5px; line-height: 1.65;">
+<span class="you">▶ 사용자 입력</span>
+/superpowers:execute-plan
+
+<span class="ai">→ 진입 스킬 · auto</span>
+   using-superpowers                       <em style="color:#9CA89F;"># 라우터 · 컨텍스트 주입</em>
+   subagent-driven-development             <em style="color:#9CA89F;"># 병렬 dispatch + 자동 리뷰</em>
+
+<span class="ai">→ 각 sub-agent 내부 · 병렬 4개</span>
+   ├ using-test-driven-development         <em style="color:#9CA89F;"># RED 작성 강제</em>
+   ├ condition-based-waiting               <em style="color:#9CA89F;"># 테스트 안정 대기</em>
+   ├ debugging-with-the-scientific-method  <em style="color:#9CA89F;"># 실패 시 4단계 디버깅</em>
+   ├ root-cause-investigation              <em style="color:#9CA89F;"># 3회 실패 시 정지</em>
+   └ handling-errors                       <em style="color:#9CA89F;"># 예외 처리 패턴</em>
+
+<span class="ai">→ 완료</span>
+   spec-compliance review · code-quality review · commit  <em style="color:#9CA89F;">(all auto)</em>
+    </div>
+
+    <div class="callout" style="margin-top: 12px;">
+      <div class="label">라우팅</div>
+      <div class="text">SKILL.md description = 라우터 <span style="color:var(--muted);"> · </span> 컨텍스트는 필요할 때만 로드 <span style="color:var(--muted);"> · </span> 매 호출마다 "이 스킬 써줘" 지시 불필요</div>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="inner">
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 검증</span></div><div class="pagenum">82</div></div>
     <div class="practice-meta">
       <span class="pill">Stage B</span>
       <span class="pill tool">로컬 검증 + git push</span>
@@ -2873,7 +3134,7 @@ git push    <em style="color:#9CA89F;"># Vercel이 push 감지 → 자동 재배
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · Vercel 배포</span></div><div class="pagenum">79</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · Vercel 배포</span></div><div class="pagenum">83</div></div>
     <div class="practice-meta">
       <span class="pill" style="background: var(--forest); color: white;">Stage C · 확장</span>
       <span class="pill tool">Vercel</span>
@@ -2918,7 +3179,62 @@ git push    <em style="color:#9CA89F;"># Vercel이 push 감지 → 자동 재배
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · Google OAuth</span></div><div class="pagenum">80</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · Vercel 배포</span></div><div class="pagenum">84</div></div>
+    <div class="practice-meta">
+      <span class="pill" style="background: var(--forest); color: white;">Stage C · 확장</span>
+      <span class="pill tool">Vercel · 5단계</span>
+    </div>
+    <h3 class="display" style="margin-bottom: 6px;">Vercel — Import에서 라이브 URL까지</h3>
+    <p class="body" style="color: var(--ink-soft); margin-bottom: 14px;">GitHub repo 한 번 연결 · 이후 <code style="font-family: var(--mono); font-size: 12px;">git push</code>가 자동 재배포 트리거 · Neon 자동 · Auth.js 수동</p>
+
+    <div class="num-list" style="flex: none; gap: 6px;">
+      <div class="item" style="align-items: start; grid-template-columns: 42px 1fr;">
+        <div class="n" style="font-size: 32px;">01</div>
+        <div>
+          <div class="t" style="font-size: 17px;">vercel.com → <strong>Add New → Project</strong> → Import from GitHub</div>
+          <div class="d" style="font-size: 12.5px;">fork된 보일러플레이트 repo 선택 · GitHub 권한 1회 승인</div>
+        </div>
+      </div>
+      <div class="item" style="align-items: start; grid-template-columns: 42px 1fr;">
+        <div class="n" style="font-size: 32px;">02</div>
+        <div>
+          <div class="t" style="font-size: 17px;"><strong>Framework Preset · Next.js</strong> 자동 감지</div>
+          <div class="d" style="font-size: 12.5px;">Build · Output · Install 명령 기본값 OK · Root Directory 변경 X</div>
+        </div>
+      </div>
+      <div class="item" style="align-items: start; grid-template-columns: 42px 1fr;">
+        <div class="n" style="font-size: 32px;">03</div>
+        <div>
+          <div class="t" style="font-size: 17px;">Environment Variables — <strong>Neon 자동 · Auth 수동</strong></div>
+          <div class="d" style="font-size: 11.5px; font-family: var(--mono); line-height: 1.55;">POSTGRES_*                       <em style="color:#9CA89F;"># Storage 통합 시 자동 등록</em><br>AUTH_SECRET · NEXTAUTH_URL       <em style="color:#9CA89F;"># Auth.js 필수</em><br>AUTH_GOOGLE_* · AUTH_KAKAO_*     <em style="color:#9CA89F;"># OAuth 키</em></div>
+        </div>
+      </div>
+      <div class="item" style="align-items: start; grid-template-columns: 42px 1fr;">
+        <div class="n" style="font-size: 32px;">04</div>
+        <div>
+          <div class="t" style="font-size: 17px;"><strong>Deploy</strong> 클릭 → 첫 빌드 → 라이브 URL 발급</div>
+          <div class="d" style="font-size: 11.5px; font-family: var(--mono);">https://my-cafe-&lt;user&gt;.vercel.app</div>
+        </div>
+      </div>
+      <div class="item" style="align-items: start; grid-template-columns: 42px 1fr;">
+        <div class="n" style="font-size: 32px;">05</div>
+        <div>
+          <div class="t" style="font-size: 17px;">이후 자동 — <strong>git push</strong>가 트리거</div>
+          <div class="d" style="font-size: 12.5px;">feature branch push → preview URL 자동 / main push → production 자동 갱신</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 10px; padding: 8px 14px;">
+      <div class="label">환경변수 흐름</div>
+      <div class="text" style="font-size: 13px;">DB는 Storage 통합으로 자동 등록 <span style="color:var(--muted);"> · </span> Auth.js · OAuth 키는 수동 입력 <span style="color:var(--muted);"> · </span> Production · Preview · Development 환경 각각 설정 가능</div>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="inner">
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · Google OAuth</span></div><div class="pagenum">85</div></div>
     <div class="practice-meta">
       <span class="pill" style="background: var(--forest); color: white;">Stage C · 확장</span>
       <span class="pill tool">Google Cloud · Auth.js</span>
@@ -2966,7 +3282,7 @@ git push    <em style="color:#9CA89F;"># Vercel이 push 감지 → 자동 재배
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · Kakao OAuth</span></div><div class="pagenum">81</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · Kakao OAuth</span></div><div class="pagenum">86</div></div>
     <div class="practice-meta">
       <span class="pill" style="background: var(--forest); color: white;">Stage C · 확장</span>
       <span class="pill tool">Kakao Developers · Auth.js</span>
@@ -3015,7 +3331,7 @@ REST API 키를 AUTH_KAKAO_ID, Client Secret을 AUTH_KAKAO_SECRET으로.
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 재배포</span></div><div class="pagenum">82</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 재배포</span></div><div class="pagenum">87</div></div>
     <div class="practice-meta">
       <span class="pill" style="background: var(--forest); color: white;">Stage C · 확장</span>
       <span class="pill tool">production 검증</span>
@@ -3056,7 +3372,7 @@ git push    <em style="color:#9CA89F;"># 빌드 끝나면 production URL 갱신<
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 회고</span></div><div class="pagenum">83</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 회고</span></div><div class="pagenum">88</div></div>
     <div class="eyebrow">실습 회고</div>
     <h2 class="display" style="margin-bottom: 18px;">사전 보일러플레이트 + 멀티에이전트 + OAuth</h2>
     <div class="grid-2" style="gap: 22px;">
@@ -3088,7 +3404,7 @@ git push    <em style="color:#9CA89F;"># 빌드 끝나면 production URL 갱신<
 
 <section class="slide layout-divider">
   <div class="inner">
-    <div class="strip invert"><div class="left"><span class="dot"></span><span>Module Six</span></div><div class="pagenum">84</div></div>
+    <div class="strip invert"><div class="left"><span class="dot"></span><span>Module Six</span></div><div class="pagenum">89</div></div>
     <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
       <div class="divider-no">06</div>
       <div class="divider-label">Part Six · 현장 추가 실습</div>
@@ -3099,7 +3415,7 @@ git push    <em style="color:#9CA89F;"># 빌드 끝나면 production URL 갱신<
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · 아이디어</span></div><div class="pagenum">85</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · 아이디어</span></div><div class="pagenum">90</div></div>
     <div class="practice-meta">
       <span class="pill">현장 실습</span>
       <span class="pill tool">자유주제 · Stage A부터</span>
@@ -3137,7 +3453,7 @@ git push    <em style="color:#9CA89F;"># 빌드 끝나면 production URL 갱신<
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · 보일러플레이트</span></div><div class="pagenum">86</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · 보일러플레이트</span></div><div class="pagenum">91</div></div>
     <div class="practice-meta">
       <span class="pill">현장 실습</span>
       <span class="pill tool">Stage A · 직접 빌드</span>
@@ -3184,7 +3500,7 @@ git push    <em style="color:#9CA89F;"># 빌드 끝나면 production URL 갱신<
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · 한 사이클</span></div><div class="pagenum">87</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · 한 사이클</span></div><div class="pagenum">92</div></div>
     <div class="practice-meta">
       <span class="pill">현장 실습</span>
       <span class="pill tool">Stage A → B → 배포</span>
@@ -3215,7 +3531,7 @@ git push    <em style="color:#9CA89F;"># 빌드 끝나면 production URL 갱신<
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Q &amp; A</span></div><div class="pagenum">88</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Q &amp; A</span></div><div class="pagenum">93</div></div>
     <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
       <h1 class="cover-title" style="font-size: 120px; margin-bottom: 18px;">Q &amp; A</h1>
       <div class="cover-rule" style="max-width: 240px; margin-bottom: 22px;"></div>
