@@ -307,7 +307,7 @@
       <div class="toc-item"><div class="n">03</div><div class="t">플러그인 — Superpowers · gstack</div><div class="meta"></div></div>
       <div class="toc-item"><div class="n">04</div><div class="t">팀처럼 일하기 — 멀티 에이전트</div><div class="meta"></div></div>
       <div class="toc-item"><div class="n">05</div><div class="t">메인 실습 — 풀스택 Next.js</div><div class="meta"></div></div>
-      <div class="toc-item" style="border-bottom: none;"><div class="n">06</div><div class="t">내일부터 — 팀 도입 로드맵</div><div class="meta"></div></div>
+      <div class="toc-item" style="border-bottom: none;"><div class="n">06</div><div class="t">현장 추가 실습 — 자유주제 개인 프로젝트</div><div class="meta"></div></div>
     </div>
   </div>
 </section>
@@ -330,8 +330,8 @@
         <p class="body sm" style="margin-top: 6px;">Next.js + DB + 배포까지</p>
       </div>
       <div style="padding: 18px 22px; background: var(--paper-2); border-left: 3px solid var(--rust);">
-        <div class="eyebrow">④</div><h4 class="display">팀 도입 로드맵</h4>
-        <p class="body sm" style="margin-top: 6px;">내일/이번주/이번달 단계별 액션</p>
+        <div class="eyebrow">④</div><h4 class="display">자유주제 한 사이클</h4>
+        <p class="body sm" style="margin-top: 6px;">본인 아이디어로 PRD부터 배포까지 직접</p>
       </div>
     </div>
   </div>
@@ -652,10 +652,51 @@ echo $ANTHROPIC_API_KEY
   </div>
 </section>
 
+<!-- ===== 3-bis. 에이전트 잘 활용하는 법 (프롬프트) ===== -->
+<section class="slide">
+  <div class="inner">
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 00 · 기초 03 · 활용</span></div><div class="pagenum">15</div></div>
+    <div class="eyebrow">기초 03 · 프롬프트</div>
+    <h2 class="display" style="margin-bottom: 6px;">프롬프트 = 사양서</h2>
+    <p class="body lg" style="color: var(--ink-soft); margin-bottom: 18px;">에이전트는 사람의 의도를 <em class="italic">추론</em>해 일한다 — 추론거리가 많을수록 빗나간다</p>
+
+    <div class="grid-2-asym" style="gap: 28px; flex: 1; min-height: 0;">
+      <div style="display: flex; flex-direction: column; justify-content: center;">
+        <div class="eyebrow">기본 원칙</div>
+        <div class="num-list" style="flex: none; gap: 14px; justify-content: flex-start; margin-top: 8px;">
+          <div class="item" style="align-items: start;">
+            <div class="n">01</div>
+            <div><div class="t">목표를 동사로 — 결과 기준까지</div></div>
+          </div>
+          <div class="item" style="align-items: start;">
+            <div class="n">02</div>
+            <div><div class="t">컨텍스트 먼저 — 룰 · 파일 · 선례</div></div>
+          </div>
+          <div class="item" style="align-items: start;">
+            <div class="n">03</div>
+            <div><div class="t">검증 방식도 사양에 — "어떻게 확인하나"</div></div>
+          </div>
+          <div class="item" style="align-items: start;">
+            <div class="n">04</div>
+            <div><div class="t">Plan Mode부터 — 방향 확인 후 코드</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="img-slot">
+        <div class="corner tl"></div><div class="corner tr"></div>
+        <div class="corner bl"></div><div class="corner br"></div>
+        <div class="mark">Image</div>
+        <div class="hint">프롬프트 예시 이미지</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== 4. 하네스 ===== -->
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 00 · 기초 04</span></div><div class="pagenum">15</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 00 · 기초 04</span></div><div class="pagenum">16</div></div>
     <div class="eyebrow">기초 04 · 하네스 · 어원</div>
     <h2 class="display" style="margin-bottom: 6px;">하네스</h2>
     <p class="body lg" style="color: var(--ink-soft); margin-bottom: 14px;">원래는 말에게 마차를 끌게 해주는 장구(裝具)</p>
@@ -674,7 +715,7 @@ echo $ANTHROPIC_API_KEY
 <!-- ===== 4. 하네스 — 구성요소 ===== -->
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 00 · 기초 04 · 구성</span></div><div class="pagenum">16</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 00 · 기초 04 · 구성</span></div><div class="pagenum">17</div></div>
     <div class="eyebrow">기초 04 · 하네스 · 구성</div>
     <h2 class="display" style="margin-bottom: 18px;">하네스의 구성</h2>
 
@@ -704,10 +745,46 @@ echo $ANTHROPIC_API_KEY
   </div>
 </section>
 
+<!-- ===== 4-bis. 하네스 → 프롬프트가 짧아져도 OK ===== -->
+<section class="slide">
+  <div class="inner">
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 00 · 기초 04 · 효과</span></div><div class="pagenum">18</div></div>
+    <div class="eyebrow">기초 04 · 다시 프롬프트</div>
+    <h2 class="display" style="margin-bottom: 6px;">한 줄이면 충분</h2>
+    <p class="body lg" style="color: var(--ink-soft); margin-bottom: 18px;">하네스가 컨텍스트를 <em class="italic">알아서 주입</em> — 프롬프트엔 의도만 명확하면 된다</p>
+
+    <div class="compare">
+      <div>
+        <div class="label">예전 — 사람이 다 박아야</div>
+        <ul style="font-size: 14px; line-height: 1.75; color: var(--ink-soft); padding-left: 18px; margin-top: 6px;">
+          <li>파일 경로 · 라이브러리 명시</li>
+          <li>코드 스타일 · 컨벤션 매번 반복</li>
+          <li>관련 모듈 내용 직접 붙여넣기</li>
+          <li>검증 방식까지 사람이 지시</li>
+        </ul>
+      </div>
+      <div>
+        <div class="label forest">지금 — 하네스가 처리</div>
+        <ul style="font-size: 14px; line-height: 1.75; color: var(--ink-soft); padding-left: 18px; margin-top: 6px;">
+          <li><em class="italic">CLAUDE.md / AGENTS.md</em> 자동 인수</li>
+          <li><em class="italic">스킬 · MCP</em>가 도구·문맥 주입</li>
+          <li><em class="italic">파일 검색</em>으로 관련 코드 자동 추출</li>
+          <li>"테스트 추가해줘" 한 줄로 OK</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 18px;">
+      <div class="label">그래서</div>
+      <div class="text">앞의 <em class="italic">4가지 원칙</em>은 여전히 유효 — 다만 <em class="italic accent-rust">반복 입력 부담은 하네스가 흡수</em>한다.</div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== 5. RAG 비유 ===== -->
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 00 · 기초 05 · 비유</span></div><div class="pagenum">17</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 00 · 기초 05 · 비유</span></div><div class="pagenum">19</div></div>
     <div class="eyebrow">기초 05 · RAG · 비유</div>
     <h2 class="display" style="margin-bottom: 6px;">RAG</h2>
     <p class="body lg" style="color: var(--ink-soft); margin-bottom: 14px;">백과사전 비유</p>
@@ -721,7 +798,7 @@ echo $ANTHROPIC_API_KEY
 <!-- ===== 5. RAG 개요 ===== -->
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 00 · 기초 05</span></div><div class="pagenum">18</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 00 · 기초 05</span></div><div class="pagenum">20</div></div>
     <div class="eyebrow">기초 05 · RAG</div>
     <h2 class="display" style="margin-bottom: 6px;">RAG</h2>
     <p class="body lg" style="color: var(--ink-soft); margin-bottom: 18px;">Retrieval-Augmented Generation — 외부 지식 검색</p>
@@ -761,7 +838,7 @@ echo $ANTHROPIC_API_KEY
 <!-- ===== 5. RAG 상세 ① 청킹 ===== -->
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 00 · 기초 05 · 상세</span></div><div class="pagenum">19</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 00 · 기초 05 · 상세</span></div><div class="pagenum">21</div></div>
     <div class="eyebrow">기초 05 · RAG · 상세 ①</div>
     <h2 class="display" style="margin-bottom: 6px;">청킹</h2>
     <p class="body lg" style="color: var(--ink-soft); margin-bottom: 12px;">원본 문서 → 청크 → 벡터 DB</p>
@@ -777,7 +854,7 @@ echo $ANTHROPIC_API_KEY
 <!-- ===== 5. RAG 상세 ② 유사도 ===== -->
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 00 · 기초 05 · 상세</span></div><div class="pagenum">20</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 00 · 기초 05 · 상세</span></div><div class="pagenum">22</div></div>
     <div class="eyebrow">기초 05 · RAG · 상세 ②</div>
     <h2 class="display" style="margin-bottom: 6px;">유사도 검색</h2>
     <p class="body lg" style="color: var(--ink-soft); margin-bottom: 12px;">의미가 가까우면 벡터도 가깝다</p>
@@ -793,7 +870,7 @@ echo $ANTHROPIC_API_KEY
 <!-- ===== 5. RAG 종합 ③ ===== -->
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 00 · 기초 05 · 종합</span></div><div class="pagenum">21</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 00 · 기초 05 · 종합</span></div><div class="pagenum">23</div></div>
     <div class="eyebrow">기초 05 · RAG · 종합</div>
     <h2 class="display" style="margin-bottom: 6px;">코드 에이전트 RAG</h2>
     <p class="body lg" style="color: var(--ink-soft); margin-bottom: 10px;">전체 아키텍처</p>
@@ -809,7 +886,7 @@ echo $ANTHROPIC_API_KEY
 <!-- ===== 6. 멀티에이전트 ===== -->
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 00 · 기초 06</span></div><div class="pagenum">22</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 00 · 기초 06</span></div><div class="pagenum">24</div></div>
     <div class="eyebrow">기초 06 · 멀티에이전트</div>
     <h2 class="display" style="margin-bottom: 6px;">멀티에이전트</h2>
     <p class="body lg" style="color: var(--ink-soft); margin-bottom: 18px;">여러 에이전트가 역할을 나눠 협업</p>
@@ -842,7 +919,7 @@ echo $ANTHROPIC_API_KEY
 <!-- ===== 6. 멀티에이전트 구조 ===== -->
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 00 · 기초 06 · 구조</span></div><div class="pagenum">23</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 00 · 기초 06 · 구조</span></div><div class="pagenum">25</div></div>
     <div class="eyebrow">기초 06 · 멀티에이전트 · 구조</div>
     <h2 class="display" style="margin-bottom: 6px;">멀티에이전트 시스템</h2>
     <p class="body lg" style="color: var(--ink-soft); margin-bottom: 12px;">5개 역할 + 공유 메모리 + 피드백 루프</p>
@@ -856,7 +933,7 @@ echo $ANTHROPIC_API_KEY
 <!-- ===== 7. 환각 (재등장) ===== -->
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 00 · 기초 07</span></div><div class="pagenum">24</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 00 · 기초 07</span></div><div class="pagenum">26</div></div>
     <div class="eyebrow">기초 07 · 환각 (재등장)</div>
     <h2 class="display" style="margin-bottom: 6px;">환각</h2>
     <p class="body lg" style="color: var(--ink-soft); margin-bottom: 16px;">버그가 아니라 본질 — 모델의 본성</p>
@@ -894,7 +971,7 @@ echo $ANTHROPIC_API_KEY
      ============================================================ -->
 <section class="slide layout-divider">
   <div class="inner">
-    <div class="strip invert"><div class="left"><span class="dot"></span><span>Module One</span></div><div class="pagenum">25</div></div>
+    <div class="strip invert"><div class="left"><span class="dot"></span><span>Module One</span></div><div class="pagenum">27</div></div>
     <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
       <div class="divider-no">01</div>
       <div class="divider-label">Part One · 진단</div>
@@ -905,7 +982,7 @@ echo $ANTHROPIC_API_KEY
 
 <section class="slide layout-statement">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 01 · 도입</span></div><div class="pagenum">26</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 01 · 도입</span></div><div class="pagenum">28</div></div>
     <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
       <div class="eyebrow">Q.</div>
       <p class="statement">Claude Code · Codex<br>— <span class="accent-rust">어떻게</span> 쓰세요?</p>
@@ -915,7 +992,7 @@ echo $ANTHROPIC_API_KEY
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 01 · 현실</span></div><div class="pagenum">27</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 01 · 현실</span></div><div class="pagenum">29</div></div>
     <div class="eyebrow">가장 흔한 3가지 사용 패턴</div>
     <h2 class="display" style="margin-bottom: 18px;">대부분 이렇게 씁니다</h2>
     <div class="num-list" style="flex: none; gap: 16px;">
@@ -950,7 +1027,7 @@ echo $ANTHROPIC_API_KEY
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 01 · 정의</span></div><div class="pagenum">28</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 01 · 정의</span></div><div class="pagenum">30</div></div>
     <div class="eyebrow">기본 개념 정리</div>
     <h2 class="display" style="margin-bottom: 18px;">AI 어시스턴트 vs AI 에이전트</h2>
     <p class="body lg" style="margin-bottom: 14px;">코드 어시스턴트로만 써왔다면 — <em class="italic accent-rust">에이전트로서의 능력</em>은 거의 안 써본 겁니다.</p>
@@ -983,7 +1060,7 @@ echo $ANTHROPIC_API_KEY
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 01 · 작동 원리</span></div><div class="pagenum">29</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 01 · 작동 원리</span></div><div class="pagenum">31</div></div>
     <div class="eyebrow">에이전트는 어떻게 일하는가</div>
     <h2 class="display" style="margin-bottom: 14px;">5단계 자율 루프</h2>
 
@@ -1036,7 +1113,7 @@ echo $ANTHROPIC_API_KEY
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 01 · 능력</span></div><div class="pagenum">30</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 01 · 능력</span></div><div class="pagenum">32</div></div>
     <div class="eyebrow">코드 에이전트의 작업 범위</div>
     <h2 class="display" style="margin-bottom: 6px;">자동완성과는 차원이 다른 작업들</h2>
     <p class="body lg" style="color: var(--ink-soft); margin-bottom: 12px;">10가지 영역에 걸쳐 — 요구사항 분석부터 운영까지</p>
@@ -1049,7 +1126,7 @@ echo $ANTHROPIC_API_KEY
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 01 · 진화</span></div><div class="pagenum">31</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 01 · 진화</span></div><div class="pagenum">33</div></div>
     <div class="eyebrow">사용 단계</div>
     <h2 class="display" style="margin-bottom: 22px;">3단계 진화론</h2>
     <div class="grid-3" style="flex: none; gap: 14px;">
@@ -1078,7 +1155,7 @@ echo $ANTHROPIC_API_KEY
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 01 · 예고편</span></div><div class="pagenum">32</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 01 · 예고편</span></div><div class="pagenum">34</div></div>
     <div class="eyebrow">실습 목표</div>
     <h2 class="display" style="margin-bottom: 16px;">풀스택 <em class="italic accent-rust">Next.js 앱</em></h2>
     <div class="grid-3" style="flex: none; gap: 14px;">
@@ -1107,7 +1184,7 @@ echo $ANTHROPIC_API_KEY
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 01 · 핵심 원리</span></div><div class="pagenum">33</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 01 · 핵심 원리</span></div><div class="pagenum">35</div></div>
     <div class="eyebrow">지금 가능해진 이유</div>
     <h2 class="display" style="margin-bottom: 18px;">3가지 변화가 동시에 일어났다</h2>
     <div class="num-list" style="flex: none; gap: 14px;">
@@ -1138,7 +1215,7 @@ echo $ANTHROPIC_API_KEY
 
 <section class="slide layout-statement">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 01 · 정리</span></div><div class="pagenum">34</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 01 · 정리</span></div><div class="pagenum">36</div></div>
     <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
       <div class="eyebrow">정리</div>
       <p class="statement">프롬프트로 <span class="accent-rust">매번 가르치지 말고</span> —<br>환경에 <span class="accent-rust">한 번 정의해두자</span>.</p>
@@ -1148,7 +1225,7 @@ echo $ANTHROPIC_API_KEY
 
 <section class="slide layout-divider">
   <div class="inner">
-    <div class="strip invert"><div class="left"><span class="dot"></span><span>Module Two</span></div><div class="pagenum">35</div></div>
+    <div class="strip invert"><div class="left"><span class="dot"></span><span>Module Two</span></div><div class="pagenum">37</div></div>
     <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
       <div class="divider-no">02</div>
       <div class="divider-label">Part Two · 하네스</div>
@@ -1159,7 +1236,7 @@ echo $ANTHROPIC_API_KEY
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>멘탈 모델</span></div><div class="pagenum">36</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>멘탈 모델</span></div><div class="pagenum">38</div></div>
     <div class="eyebrow">멘탈 모델 · 비유</div>
     <h2 class="display" style="margin-bottom: 14px;">에이전트 셋업 = 신입사원 온보딩</h2>
     <table class="tbl">
@@ -1202,7 +1279,7 @@ echo $ANTHROPIC_API_KEY
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 02 · 룰 파일</span></div><div class="pagenum">37</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 02 · 룰 파일</span></div><div class="pagenum">39</div></div>
     <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 28px; padding-bottom: 18px; border-bottom: 1px solid var(--line);">
       <div>
         <div class="eyebrow">Tool · 프로젝트 룰 파일</div>
@@ -1236,7 +1313,7 @@ echo $ANTHROPIC_API_KEY
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 02 · 실전 팁 ①</span></div><div class="pagenum">38</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 02 · 실전 팁 ①</span></div><div class="pagenum">40</div></div>
     <div class="eyebrow">Tip 01</div>
     <h2 class="display" style="margin-bottom: 14px;">스택을 명시하라</h2>
     <p class="body lg" style="margin-bottom: 14px;">버전까지 적어야 합니다. "Next.js 쓰는 프로젝트" 같은 모호한 표현은 <em class="italic">Pages Router로 코드 짜는 사고</em>를 부릅니다.</p>
@@ -1255,7 +1332,7 @@ echo $ANTHROPIC_API_KEY
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 02 · 실전 팁 ②</span></div><div class="pagenum">39</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 02 · 실전 팁 ②</span></div><div class="pagenum">41</div></div>
     <div class="eyebrow">Tip 02</div>
     <h2 class="display" style="margin-bottom: 14px;">자주 쓰는 명령어를 명시하라</h2>
     <p class="body lg" style="margin-bottom: 14px;">이게 없으면 에이전트가 매번 <em class="italic">package.json을 다시 읽습니다</em>. 토큰 낭비 + 잘못된 명령어 실행 위험.</p>
@@ -1275,7 +1352,7 @@ echo $ANTHROPIC_API_KEY
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 02 · 실전 팁 ③</span></div><div class="pagenum">40</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 02 · 실전 팁 ③</span></div><div class="pagenum">42</div></div>
     <div class="eyebrow">Tip 03</div>
     <h2 class="display" style="margin-bottom: 14px;">하지 말 것을 명시하라</h2>
     <p class="body lg" style="margin-bottom: 14px;">긍정 룰보다 <em class="italic accent-rust">부정 룰이 강력</em>합니다. "이건 절대 하지 마"는 모델이 더 잘 지킴.</p>
@@ -1294,7 +1371,7 @@ echo $ANTHROPIC_API_KEY
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 02 · 실전 팁 ④</span></div><div class="pagenum">41</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 02 · 실전 팁 ④</span></div><div class="pagenum">43</div></div>
     <div class="eyebrow">Tip 04 · 비용 절감</div>
     <h2 class="display" style="margin-bottom: 16px;">프롬프트 캐싱이 자동으로 작동한다</h2>
     <div class="grid-2-asym" style="gap: 30px;">
@@ -1321,7 +1398,7 @@ echo $ANTHROPIC_API_KEY
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 02 · 실전 팁 ⑤</span></div><div class="pagenum">42</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 02 · 실전 팁 ⑤</span></div><div class="pagenum">44</div></div>
     <div class="eyebrow">Tip 05 · 양쪽 도구 동시 사용</div>
     <h2 class="display" style="margin-bottom: 14px;">AGENTS.md 단일 소스 + CLAUDE.md import</h2>
     <p class="body lg" style="margin-bottom: 14px;">두 파일 복사하지 마세요. <em class="italic">AGENTS.md를 단일 source of truth</em>로 두고, CLAUDE.md는 import만.</p>
@@ -1348,47 +1425,15 @@ echo $ANTHROPIC_API_KEY
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 02 · 효과</span></div><div class="pagenum">43</div></div>
-    <div class="eyebrow">Before / After — 동일 프롬프트, 다른 결과</div>
-    <h2 class="display" style="margin-bottom: 16px;">"다크모드 추가해줘"</h2>
-    <div class="compare">
-      <div>
-        <div class="label">Before · CLAUDE.md 없음</div>
-        <h4 class="display" style="margin-bottom: 8px;">5가지 실패 모드</h4>
-        <ul style="font-size: 13px; line-height: 1.7; color: var(--ink-soft); padding-left: 18px;">
-          <li>Tailwind 토큰 무시, 새 색상 변수 만듦</li>
-          <li>이미 있는 ThemeProvider 발견 못 함</li>
-          <li>localStorage 직접 참조 → SSR 깨짐</li>
-          <li>테스트 미작성</li>
-          <li>prettier 설정 무시</li>
-        </ul>
-      </div>
-      <div>
-        <div class="label forest">After · CLAUDE.md 있음</div>
-        <h4 class="display" style="margin-bottom: 8px;">대부분 사라짐</h4>
-        <ul style="font-size: 13px; line-height: 1.7; color: var(--ink-soft); padding-left: 18px;">
-          <li><em class="italic">기존 토큰 자동 활용</em></li>
-          <li><em class="italic">ThemeProvider 재사용</em></li>
-          <li><em class="italic">useTheme 훅 자동 생성</em> (SSR 안전)</li>
-          <li><em class="italic">테스트 자동 작성</em></li>
-          <li><em class="italic">prettier · ESLint 통과</em></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="slide">
-  <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>사용 원칙</span></div><div class="pagenum">44</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>사용 원칙</span></div><div class="pagenum">45</div></div>
     <div class="eyebrow">API 크레딧 사용의 3가지 원칙</div>
     <h2 class="display" style="margin-bottom: 22px;">반드시 지킬 규칙 — 실습 시작 전 체크</h2>
 
     <div class="grid-3" style="flex: none; gap: 14px;">
       <div style="padding: 26px 26px; background: var(--paper-2); border-top: 3px solid var(--forest); display: flex; flex-direction: column;">
         <div style="font-family: var(--display-en); font-style: italic; font-weight: 700; font-size: 56px; color: var(--forest); line-height: 1; margin-bottom: 10px;">01</div>
-        <h4 class="display" style="margin-bottom: 8px;">Haiku 4.5 기본</h4>
-        <p class="body sm" style="color: var(--ink-soft); flex: 1;">단순 작업·파일 수정·테스트 작성은 모두 Haiku로. Sonnet은 DB 설계·복잡한 추론 단계에만. <em class="italic">Opus는 워크숍에서 사용 안 함</em>.</p>
+        <h4 class="display" style="margin-bottom: 8px;">Sonnet 4.6 기본</h4>
+        <p class="body sm" style="color: var(--ink-soft); flex: 1;">모델 선택 고민 없이 — DB 설계 · CRUD · 테스트 작성까지 모두 Sonnet으로. <em class="italic">일관된 품질이 디버깅 비용을 낮춥니다</em>. Opus는 워크숍에서 사용 안 함.</p>
       </div>
       <div style="padding: 26px 26px; background: var(--paper-2); border-top: 3px solid var(--forest); display: flex; flex-direction: column;">
         <div style="font-family: var(--display-en); font-style: italic; font-weight: 700; font-size: 56px; color: var(--forest); line-height: 1; margin-bottom: 10px;">02</div>
@@ -1411,7 +1456,7 @@ echo $ANTHROPIC_API_KEY
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 02 · 실습 ①</span></div><div class="pagenum">45</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 02 · 실습 ①</span></div><div class="pagenum">46</div></div>
     <div class="practice-meta">
       <span class="pill">실습 ①</span>
       <span class="pill tool">CLAUDE.md</span>
@@ -1498,7 +1543,7 @@ npm run dev · npm test · npx prisma migrate dev
 
 <section class="slide layout-divider">
   <div class="inner">
-    <div class="strip invert"><div class="left"><span class="dot"></span><span>Module Three</span></div><div class="pagenum">46</div></div>
+    <div class="strip invert"><div class="left"><span class="dot"></span><span>Module Three</span></div><div class="pagenum">47</div></div>
     <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
       <div class="divider-no">03</div>
       <div class="divider-label">Part Three · 플러그인</div>
@@ -1509,7 +1554,7 @@ npm run dev · npm test · npx prisma migrate dev
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · 생태계</span></div><div class="pagenum">47</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · 생태계</span></div><div class="pagenum">48</div></div>
     <div class="eyebrow">Plugin Ecosystem · 2026</div>
     <h2 class="display" style="margin-bottom: 22px;">CLAUDE.md만 쓰던 시대는 끝났다</h2>
     <div class="grid-3" style="flex: none; gap: 14px;">
@@ -1530,37 +1575,37 @@ npm run dev · npm test · npx prisma migrate dev
       </div>
     </div>
     <div class="callout" style="margin-top: 22px;">
-      <div class="label">중요</div>
-      <div class="text">아무거나 모두 설치하지 마세요. <em class="italic accent-rust">표준 셋업 2개</em>만 알면 됩니다. 나머지는 필요할 때.</div>
+      <div class="label">표준 셋업 2개</div>
+      <div class="text"><em class="italic accent-rust">Superpowers · gstack</em> — 한쪽만이 아니라 둘 다 활용 가능. 강점이 달라서 서로 보완.</div>
     </div>
   </div>
 </section>
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · Superpowers</span></div><div class="pagenum">48</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · Superpowers</span></div><div class="pagenum">49</div></div>
     <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 28px; padding-bottom: 18px; border-bottom: 1px solid var(--line);">
       <div>
-        <div class="eyebrow">Plugin · 구현 루프</div>
+        <div class="eyebrow">Plugin · 6개 도구 호환</div>
         <h1 class="display" translate="no" style="font-size: 60px; line-height: 1; margin-top: 4px;">Superpowers</h1>
       </div>
-      <p style="font-family: var(--display); font-size: 22px; font-style: italic; color: var(--rust); text-align: right; margin-bottom: 10px; max-width: 50%;">TDD · 계획 · 디버깅 자동화</p>
+      <p style="font-family: var(--display); font-size: 22px; font-style: italic; color: var(--rust); text-align: right; margin-bottom: 10px; max-width: 50%;">방법론을 코드로 강제 — Hard Gate</p>
     </div>
     <div class="grid-3" style="flex: none; gap: 16px;">
-      <div style="padding: 22px 24px; background: var(--paper-2); border-top: 3px solid var(--forest);">
-        <div class="eyebrow forest">스킬 · 14개</div>
-        <h4 class="display" style="margin-bottom: 8px;">자동 발동</h4>
-        <p class="body sm" style="color: var(--ink-soft);">"기능 만들어" → TDD<br>"버그 찾아" → debugging<br>"리팩터 해" → refactoring</p>
+      <div style="padding: 22px 24px; background: var(--paper-2); border-top: 3px solid var(--rust);">
+        <div class="eyebrow">Hard Gate</div>
+        <h4 class="display" style="margin-bottom: 8px;">단계 강제</h4>
+        <p class="body sm" style="color: var(--ink-soft);">brainstorm → plan → spec<br>단계 건너뛰기 차단<br>TDD 자동 발동</p>
       </div>
       <div style="padding: 22px 24px; background: var(--paper-2); border-top: 3px solid var(--rust);">
         <div class="eyebrow">RED → GREEN</div>
         <h4 class="display" style="margin-bottom: 8px;">TDD 사이클</h4>
         <p class="body sm" style="color: var(--ink-soft);">테스트 먼저 작성<br>실패 확인<br>최소 구현 → 통과</p>
       </div>
-      <div style="padding: 22px 24px; background: var(--paper-2); border-top: 3px solid var(--rust);">
-        <div class="eyebrow">크로스 호환</div>
-        <h4 class="display" style="margin-bottom: 8px;">모든 도구</h4>
-        <p class="body sm" style="color: var(--ink-soft);">Claude Code · Codex<br>Cursor · Gemini · OpenCode</p>
+      <div style="padding: 22px 24px; background: var(--paper-2); border-top: 3px solid var(--forest);">
+        <div class="eyebrow forest">크로스 호환</div>
+        <h4 class="display" style="margin-bottom: 8px;">6개 도구</h4>
+        <p class="body sm" style="color: var(--ink-soft);">Claude Code · Cursor · Codex<br>Copilot · Gemini · OpenCode</p>
       </div>
     </div>
     <div class="prompt-box" style="margin-top: 18px;">
@@ -1583,104 +1628,119 @@ ln -s ~/.codex/superpowers/skills ~/.agents/skills/superpowers
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · gstack</span></div><div class="pagenum">49</div></div>
-    <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 28px; padding-bottom: 18px; border-bottom: 1px solid var(--line);">
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · gstack</span></div><div class="pagenum">50</div></div>
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 22px; padding-bottom: 18px; border-bottom: 1px solid var(--line);">
       <div>
-        <div class="eyebrow">Plugin · SDLC 전 영역</div>
+        <div class="eyebrow">Plugin · Claude Code 전용</div>
         <h1 class="display" translate="no" style="font-size: 60px; line-height: 1; margin-top: 4px;">gstack</h1>
       </div>
-      <p style="font-family: var(--display); font-size: 22px; font-style: italic; color: var(--rust); text-align: right; margin-bottom: 10px; max-width: 50%;">Garry Tan의 1인 스타트업 세팅</p>
+      <p style="font-family: var(--display); font-size: 22px; font-style: italic; color: var(--rust); text-align: right; margin-bottom: 10px; max-width: 50%;">가상 개발 팀 — 역할 페르소나</p>
     </div>
-    <div class="grid-3" style="flex: none; gap: 16px;">
-      <div style="padding: 22px 24px; background: var(--paper-2); border-top: 3px solid var(--forest);">
+
+    <div class="grid-3" style="flex: none; gap: 14px; margin-bottom: 14px;">
+      <div style="padding: 16px 20px; background: var(--paper-2); border-top: 3px solid var(--forest);">
         <div class="eyebrow forest">슬래시 · 23개</div>
-        <h4 class="display" style="margin-bottom: 8px;">/명령 기반</h4>
-        <p class="body sm" style="color: var(--ink-soft);">/plan · /ship · /qa · /review<br>명시적으로 호출</p>
+        <h4 class="display" style="font-size: 17px; margin-bottom: 4px;">/명령 기반</h4>
+        <p class="body sm" style="color: var(--ink-soft);">명시적 호출 — 자동 발동 아님</p>
       </div>
-      <div style="padding: 22px 24px; background: var(--paper-2); border-top: 3px solid var(--rust);">
+      <div style="padding: 16px 20px; background: var(--paper-2); border-top: 3px solid var(--rust);">
         <div class="eyebrow">역할 · 9개</div>
-        <h4 class="display" style="margin-bottom: 8px;">팀 시뮬레이션</h4>
-        <p class="body sm" style="color: var(--ink-soft);">CEO · 디자이너<br>엔지니어링 매니저<br>QA · Release · Doc 등</p>
+        <h4 class="display" style="font-size: 17px; margin-bottom: 4px;">팀 시뮬레이션</h4>
+        <p class="body sm" style="color: var(--ink-soft);">CEO · 디자이너 · EM · QA · CSO</p>
       </div>
-      <div style="padding: 22px 24px; background: var(--paper-2); border-top: 3px solid var(--rust);">
+      <div style="padding: 16px 20px; background: var(--paper-2); border-top: 3px solid var(--rust);">
         <div class="eyebrow">출처 · YC</div>
-        <h4 class="display" style="margin-bottom: 8px;">신뢰의 근거</h4>
-        <p class="body sm" style="color: var(--ink-soft);">Y Combinator 회장<br>10K star / 48시간<br>Apache 2.0 라이선스</p>
+        <h4 class="display" style="font-size: 17px; margin-bottom: 4px;">신뢰의 근거</h4>
+        <p class="body sm" style="color: var(--ink-soft);">Garry Tan · 10K star / 48시간</p>
       </div>
     </div>
-    <div class="callout" style="margin-top: 22px;">
-      <div class="label">왜 중요한가</div>
-      <div class="text">스타트업의 <em class="italic">역할 분담을 명령어로 표현</em> — CEO·EM·디자이너·QA·CSO. <em class="italic accent-rust">Superpowers와 겹치는 영역이 있지만, 역할 페르소나 측면에서 차별화</em>.</div>
+
+    <div class="prompt-box" style="font-size: 11.5px; line-height: 1.55;">
+<span class="you">▶ 설치 (Claude Code에 paste — Claude가 대신 실행)</span>
+git clone --single-branch --depth 1 \
+  https://github.com/garrytan/gstack.git ~/.claude/skills/gstack \
+  &amp;&amp; cd ~/.claude/skills/gstack &amp;&amp; ./setup
+
+<span class="you">▶ 스프린트 명령 — Think → Plan → Build → Ship</span>
+/office-hours           <em style="color:#9CA89F;"># 6개 forcing Q → design doc 자동 작성</em>
+/plan-ceo-review        <em style="color:#9CA89F;"># CEO — 제품 스코프 결정</em>
+/plan-eng-review        <em style="color:#9CA89F;"># EM — 아키텍처 검토</em>
+/autoplan               <em style="color:#9CA89F;"># CEO + 디자인 + 엔지니어링 검토 자동</em>
+/cso  ·  /qa  ·  /ship  ·  /retro
     </div>
   </div>
 </section>
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · gstack 명령어</span></div><div class="pagenum">50</div></div>
-    <div class="eyebrow">23개 명령 중 — gstack만의 강점</div>
-    <h3 class="display" style="margin-bottom: 14px;">Superpowers와 차별화된 명령어들</h3>
-    <table class="tbl">
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · 비교</span></div><div class="pagenum">51</div></div>
+    <div class="eyebrow">Superpowers vs gstack — 성격이 다르다</div>
+    <h2 class="display" style="margin-bottom: 12px;">방법론을 코드로 강제 <span style="color:var(--muted); font-weight:400; font-style:italic;">vs</span> 가상 개발 팀</h2>
+
+    <table class="tbl" style="margin-top: 2px;">
       <thead>
-        <tr><th>명령어</th><th>페르소나</th><th>가치</th></tr>
+        <tr><th style="width:14%;">측면</th><th style="color: var(--rust); width:43%;">Superpowers</th><th style="color: var(--forest); width:43%;">gstack</th></tr>
       </thead>
       <tbody>
-        <tr><td class="tool">/plan-ceo-review</td><td>CEO</td><td>제품 스코프 — 확장/축소/홀드 결정</td></tr>
-        <tr><td class="tool">/plan-eng-review</td><td>엔지니어링 매니저</td><td>아키텍처·데이터플로·엣지케이스</td></tr>
-        <tr><td class="tool">/plan-design-review</td><td>시니어 디자이너</td><td>10단계 디자인 평가 · AI slop 감지</td></tr>
-        <tr><td class="tool">/design-consultation</td><td>디자이너</td><td>디자인 시스템 처음부터 — DESIGN.md 생성</td></tr>
-        <tr><td class="tool">/cso</td><td>보안 책임자</td><td>보안 리뷰 — 워크숍에서 한 번 써볼 가치 있음</td></tr>
-        <tr><td class="tool">/qa</td><td>QA 리드</td><td>실제 브라우저 띄워서 E2E 자동화</td></tr>
-        <tr><td class="tool">/ship</td><td>릴리스 매니저</td><td>테스트·푸시·PR을 한 체인으로</td></tr>
-        <tr><td class="tool">/retro</td><td>회고</td><td>스프린트 회고록 자동 작성</td></tr>
+        <tr>
+          <td style="font-family: var(--display); font-weight: 700; color: var(--ink-soft); font-size: 13px;">메타포</td>
+          <td><em class="italic accent-rust">방법론을 코드로 강제</em></td>
+          <td><em class="italic accent-forest">가상 개발 팀 — 역할별 페르소나</em></td>
+        </tr>
+        <tr>
+          <td style="font-family: var(--display); font-weight: 700; color: var(--ink-soft); font-size: 13px;">강제력</td>
+          <td><em class="italic">강함</em> — hard gate가 단계 건너뛰기 차단</td>
+          <td>느슨함 — 원할 때 슬래시 호출</td>
+        </tr>
+        <tr>
+          <td style="font-family: var(--display); font-weight: 700; color: var(--ink-soft); font-size: 13px;">기획 단계</td>
+          <td>brainstorm → planning → spec review (Socratic)</td>
+          <td><em class="italic">/plan-ceo-review</em> → <em class="italic">/plan-eng-review</em> (2단계)</td>
+        </tr>
+        <tr>
+          <td style="font-family: var(--display); font-weight: 700; color: var(--ink-soft); font-size: 13px;">구현 단계</td>
+          <td>TDD + subagent 병렬 + 자동 리뷰 <em class="italic">(강제)</em></td>
+          <td>자유 코딩 → <em class="italic">/review</em>로 사후 점검</td>
+        </tr>
+        <tr>
+          <td style="font-family: var(--display); font-weight: 700; color: var(--ink-soft); font-size: 13px;">QA</td>
+          <td>TDD가 곧 QA — 별도 브라우저 자동화 없음</td>
+          <td><em class="italic">/browse</em> (Playwright 데몬) + <em class="italic">/qa</em></td>
+        </tr>
+        <tr>
+          <td style="font-family: var(--display); font-weight: 700; color: var(--ink-soft); font-size: 13px;">릴리스</td>
+          <td>자동화된 릴리스 명령 없음</td>
+          <td><em class="italic">/ship</em> 원커맨드</td>
+        </tr>
+        <tr>
+          <td style="font-family: var(--display); font-weight: 700; color: var(--ink-soft); font-size: 13px;">병렬 처리</td>
+          <td>subagent + git worktree</td>
+          <td>Conductor + git worktree <em class="italic">(10개 세션)</em></td>
+        </tr>
+        <tr>
+          <td style="font-family: var(--display); font-weight: 700; color: var(--ink-soft); font-size: 13px;">호환성</td>
+          <td>Claude Code · Cursor · Codex · Copilot · Gemini · OpenCode</td>
+          <td><em class="italic">Claude Code 전용</em></td>
+        </tr>
       </tbody>
     </table>
-  </div>
-</section>
 
-<section class="slide">
-  <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · 통합</span></div><div class="pagenum">51</div></div>
-    <div class="eyebrow">워크숍 전략 — 어느 쪽을 메인으로</div>
-    <h2 class="display" style="margin-bottom: 18px;">Superpowers를 메인, gstack은 보조</h2>
-
-    <div class="grid-2" style="gap: 22px; margin-bottom: 18px;">
-      <div style="padding: 22px 24px; background: var(--paper-2); border-top: 3px solid var(--rust);">
-        <div class="eyebrow">메인 · Superpowers</div>
-        <h4 class="display" style="margin-bottom: 10px;">실제 구현 워크플로</h4>
-        <ul style="font-size: 13px; line-height: 1.7; color: var(--ink-soft); padding-left: 18px; margin-top: 6px;">
-          <li>brainstorm → write-plan → execute-plan</li>
-          <li>sub-agents 자동 분배 · TDD 자동 적용</li>
-          <li>Claude Code · Codex 양쪽 동작</li>
-        </ul>
-      </div>
-      <div style="padding: 22px 24px; background: var(--paper-2); border-top: 3px solid var(--forest);">
-        <div class="eyebrow forest">보조 · gstack</div>
-        <h4 class="display" style="margin-bottom: 10px;">필요 시 호출</h4>
-        <ul style="font-size: 13px; line-height: 1.7; color: var(--ink-soft); padding-left: 18px; margin-top: 6px;">
-          <li><em class="italic accent-rust">/cso</em> — 보안 리뷰 (워크숍에서 시도)</li>
-          <li>/design-consultation — DESIGN.md 자동 작성</li>
-          <li>/plan-design-review — 디자인 평가</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="callout">
-      <div class="label">왜 둘 다 안 쓰나</div>
-      <div class="text">두 플러그인이 <em class="italic">계획 단계에서 겹치는 부분이 많음</em>. 한 도구로 가야 컨텍스트가 깔끔. <em class="italic accent-rust">메인은 하나, 보조는 골라서</em>.</div>
+    <div class="callout" style="margin-top: 12px;">
+      <div class="label">함께 쓰면</div>
+      <div class="text">강제력은 Superpowers, SDLC 폭은 gstack. 예) gstack <em class="italic">/office-hours</em>로 design doc → Superpowers <em class="italic">/execute-plan</em>으로 강제 TDD 병렬 구현 → gstack <em class="italic">/ship</em>으로 릴리스.</div>
     </div>
   </div>
 </section>
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · 실습 ②</span></div><div class="pagenum">52</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · 실습 ② · Superpowers</span></div><div class="pagenum">52</div></div>
     <div class="practice-meta">
       <span class="pill">실습 ②</span>
-      <span class="pill tool">Superpowers + gstack</span>
+      <span class="pill tool">Superpowers 트랙</span>
     </div>
-    <h3 class="display" style="margin-bottom: 8px;">설치 + /plan 시연 — PM처럼 묻는 에이전트 보기</h3>
-    <p class="body" style="color: var(--ink-soft); margin-bottom: 14px;">코드 한 줄 없이 <em class="italic">대화만으로 PRD가 만들어지는 흐름</em>을 한 번 — Stage A의 핵심 의례</p>
+    <h3 class="display" style="margin-bottom: 8px;">/plan으로 PRD 자동 작성</h3>
+    <p class="body" style="color: var(--ink-soft); margin-bottom: 14px;">대화 한 번으로 <em class="italic">prd.md + IMPL_PLAN.md가 만들어지는 흐름</em> — 구현 자동화의 강점</p>
 
     <div class="grid-2-asym" style="gap: 22px; flex: none;">
       <div>
@@ -1689,15 +1749,15 @@ ln -s ~/.codex/superpowers/skills ~/.agents/skills/superpowers
           <div class="item" style="align-items: start;">
             <div class="n">01</div>
             <div>
-              <div class="t" style="font-size: 15.5px;">두 플러그인 설치</div>
-              <div class="d" style="font-size: 12.5px;"><code style="font-family:var(--mono);font-size:11px;">/plugin install superpowers</code> · <code style="font-family:var(--mono);font-size:11px;">gstack</code></div>
+              <div class="t" style="font-size: 15.5px;">Superpowers 설치</div>
+              <div class="d" style="font-size: 12.5px;"><code style="font-family:var(--mono);font-size:11px;">/plugin install superpowers</code></div>
             </div>
           </div>
           <div class="item" style="align-items: start;">
             <div class="n">02</div>
             <div>
               <div class="t" style="font-size: 15.5px;">빈 폴더에서 Claude Code 시작</div>
-              <div class="d" style="font-size: 12.5px;">기존 코드 영향 없이 <em class="italic">맨바닥에서 /plan</em> 을 보기 위함</div>
+              <div class="d" style="font-size: 12.5px;">맨바닥에서 <em class="italic">/plan</em> 흐름 직접 보기</div>
             </div>
           </div>
           <div class="item" style="align-items: start;">
@@ -1711,14 +1771,14 @@ ln -s ~/.codex/superpowers/skills ~/.agents/skills/superpowers
             <div class="n">04</div>
             <div>
               <div class="t" style="font-size: 15.5px;">.planning/ PRD 직접 읽어보기</div>
-              <div class="d" style="font-size: 12.5px;">사용자 스토리·도메인·API — 사람 PM 산출물과 비교해도 손색없음</div>
+              <div class="d" style="font-size: 12.5px;">사용자 스토리·도메인·API — PM 산출물 수준</div>
             </div>
           </div>
           <div class="item" style="align-items: start;">
             <div class="n">05</div>
             <div>
-              <div class="t" style="font-size: 15.5px;">/plan-eng-review — 기술 검토</div>
-              <div class="d" style="font-size: 12.5px;">"이 도메인엔 이 스택이 맞나"를 다시 따져줌</div>
+              <div class="t" style="font-size: 15.5px;">/superpowers:write-plan — IMPL_PLAN 생성</div>
+              <div class="d" style="font-size: 12.5px;">chunk별 sub-agent 분배 준비</div>
             </div>
           </div>
         </div>
@@ -1735,32 +1795,124 @@ mkdir budget &amp;&amp; cd budget &amp;&amp; claude
 + 월별 리포트. 혼자 쓰고 모바일 우선."
 
 <span class="ai">→ Superpowers (PM처럼 먼저 묻는다)</span>
-"제가 모르는 정보가 있어요:
- 1. 다중 사용자? (혼자 / 가족 / 공개)
- 2. 거래내역 import? (CSV / 은행연동 / 수동)
+"1. 다중 사용자? (혼자 / 가족 / 공개)
+ 2. 거래내역 import 방식? (CSV / 수동)
  3. 카테고리는 고정인가요, 사용자 정의?
  4. 인증 방식은? (이메일 / 소셜 / 없음)"
 
-<span class="you">▶ 짧게 답하기 (3-5줄)</span>
+<span class="you">▶ 짧게 답 (3-5줄)</span>
 "혼자. 수동. 사용자 정의. 이메일만."
 
-<span class="ai">→ .planning/prd.md 자동 생성</span>
+<span class="ai">→ .planning/prd.md + IMPL_PLAN.md</span>
 📝 사용자 스토리 · 도메인 · API · 비고려 영역
-📝 .planning/IMPL_PLAN.md 도 함께
+📝 chunk별 sub-agent 분배 계획
         </div>
       </div>
     </div>
 
     <div class="callout" style="margin-top: 12px;">
-      <div class="label">관전 포인트 — 이게 보이면 성공</div>
-      <div class="text"><em class="italic accent-rust">"제가 모르는 정보가 있는데요"</em> — 무지를 인정하고 먼저 묻는 태도. 사람 PM도 이게 안 되는 경우 많다.</div>
+      <div class="label">강점</div>
+      <div class="text">한 번의 대화로 <em class="italic accent-rust">PRD + 구현 계획까지 한 번에</em> — 코드 작성 직전 단계까지 자동.</div>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="inner">
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 03 · 실습 ② · gstack</span></div><div class="pagenum">53</div></div>
+    <div class="practice-meta">
+      <span class="pill">실습 ②</span>
+      <span class="pill tool">gstack 트랙</span>
+    </div>
+    <h3 class="display" style="margin-bottom: 8px;">/office-hours로 design doc 만들기</h3>
+    <p class="body" style="color: var(--ink-soft); margin-bottom: 14px;">6개 forcing question으로 <em class="italic">진짜 만들고 싶은 것이 뭔지 발견</em> — YC 디스커버리 컨설팅 방식</p>
+
+    <div class="grid-2-asym" style="gap: 22px; flex: none;">
+      <div>
+        <div class="eyebrow">단계</div>
+        <div class="num-list" style="flex: none; gap: 10px; justify-content: flex-start; margin-top: 4px;">
+          <div class="item" style="align-items: start;">
+            <div class="n">01</div>
+            <div>
+              <div class="t" style="font-size: 15.5px;">gstack 설치</div>
+              <div class="d" style="font-size: 12.5px;"><code style="font-family:var(--mono);font-size:11px;">git clone … &amp;&amp; ./setup</code> — 50p 참고</div>
+            </div>
+          </div>
+          <div class="item" style="align-items: start;">
+            <div class="n">02</div>
+            <div>
+              <div class="t" style="font-size: 15.5px;">빈 폴더에서 Claude Code 시작</div>
+              <div class="d" style="font-size: 12.5px;">맨바닥에서 design doc 만드는 흐름</div>
+            </div>
+          </div>
+          <div class="item" style="align-items: start;">
+            <div class="n">03</div>
+            <div>
+              <div class="t" style="font-size: 15.5px;">/office-hours로 아이디어 던지기</div>
+              <div class="d" style="font-size: 12.5px;">"~ 만들고 싶다" → 6개 forcing question 받기</div>
+            </div>
+          </div>
+          <div class="item" style="align-items: start;">
+            <div class="n">04</div>
+            <div>
+              <div class="t" style="font-size: 15.5px;">짧게 답 → design doc 자동 생성</div>
+              <div class="d" style="font-size: 12.5px;">5가지 capabilities · 4가지 premises · 3가지 approaches + <em class="italic">narrowest wedge</em> 추천</div>
+            </div>
+          </div>
+          <div class="item" style="align-items: start;">
+            <div class="n">05</div>
+            <div>
+              <div class="t" style="font-size: 15.5px;">/autoplan — CEO·디자인·EM 자동 검토</div>
+              <div class="d" style="font-size: 12.5px;">개별로 /plan-ceo-review + /plan-eng-review도 가능</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="eyebrow">실제 대화 흐름</div>
+        <div class="prompt-box" style="font-size: 10.5px; line-height: 1.5; padding: 12px 14px; margin-top: 4px;">
+<span class="you">▶ 빈 폴더 + Claude Code</span>
+mkdir budget &amp;&amp; cd budget &amp;&amp; claude
+
+<span class="you">▶ /office-hours</span>
+"개인 가계부 SaaS. 수입·지출 + 카테고리
+ + 월별 리포트. 혼자 쓰고 모바일 우선."
+
+<span class="ai">→ gstack: discovery consultant</span>
+"프레이밍에 푸시백 — '가계부 앱'이 아니라
+ 사실 '5초 입력 + 통찰' 도구일 수도.
+ 6개 질문:
+ 1. 어떤 상황에서 가장 답답?
+ 2. 누가 정확히 쓸 사람?
+ 3. 첫 사용자는?
+ 4. 안 만들 결정은? (반대편)
+ 5. 6주 안 최소 출시는?
+ 6. 성공 신호 1개?"
+
+<span class="you">▶ 짧게 답 (5줄)</span>
+"퇴근길 지하철. 나 혼자. 영수증 입력 마찰..."
+
+<span class="ai">→ design doc 자동 생성</span>
+📝 5 capabilities · 4 premises · 3 approaches
+📝 narrowest wedge: "지하철 5초 입력"
+
+<span class="you">▶ /autoplan (선택)</span>
+<span class="ai">→ CEO + 디자인 + EM 자동 검토</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 12px;">
+      <div class="label">관전 포인트</div>
+      <div class="text">design doc은 <em class="italic accent-rust">downstream skills로 자동 전달</em> — /autoplan 한 번이면 CEO·디자인·엔지니어링 검토가 한 번에 끝난다.</div>
     </div>
   </div>
 </section>
 
 <section class="slide layout-divider">
   <div class="inner">
-    <div class="strip invert"><div class="left"><span class="dot"></span><span>Module Four</span></div><div class="pagenum">53</div></div>
+    <div class="strip invert"><div class="left"><span class="dot"></span><span>Module Four</span></div><div class="pagenum">54</div></div>
     <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
       <div class="divider-no">04</div>
       <div class="divider-label">Part Four · 멀티 에이전트</div>
@@ -1771,7 +1923,7 @@ mkdir budget &amp;&amp; cd budget &amp;&amp; claude
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>멘탈 모델 · 확장</span></div><div class="pagenum">54</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>멘탈 모델 · 확장</span></div><div class="pagenum">55</div></div>
     <div class="eyebrow">비유 확장 · 1명 → 팀</div>
     <h2 class="display" style="margin-bottom: 18px;">신입사원 1명 → 부서·팀</h2>
     <div class="grid-2" style="gap: 22px;">
@@ -1795,7 +1947,7 @@ mkdir budget &amp;&amp; cd budget &amp;&amp; claude
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 역할 분담</span></div><div class="pagenum">55</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 역할 분담</span></div><div class="pagenum">56</div></div>
     <div class="eyebrow">실제 스타트업 개발팀 ↔ 에이전트 매핑</div>
     <h2 class="display" style="margin-bottom: 18px;">5명의 역할을 그대로</h2>
     <table class="tbl">
@@ -1835,7 +1987,7 @@ mkdir budget &amp;&amp; cd budget &amp;&amp; claude
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 흐름</span></div><div class="pagenum">56</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 흐름</span></div><div class="pagenum">57</div></div>
     <div class="eyebrow">한 사이클</div>
     <h2 class="display" style="margin-bottom: 14px;">아이디어 → 배포까지 5단계</h2>
 
@@ -1888,7 +2040,7 @@ mkdir budget &amp;&amp; cd budget &amp;&amp; claude
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · Plan Mode</span></div><div class="pagenum">57</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · Plan Mode</span></div><div class="pagenum">58</div></div>
     <div class="eyebrow">Tip · /plan 의 진짜 가치</div>
     <h2 class="display" style="margin-bottom: 14px;">탐색 ≠ 수정</h2>
     <p class="body lg" style="margin-bottom: 14px;">Plan Mode는 <em class="italic">읽기 전용</em>입니다. 코드베이스를 분석해서 <em class="italic accent-rust">계획서</em>를 내놓고 <em class="italic">사람의 승인을 기다립니다</em>. 한 줄도 수정 안 함.</p>
@@ -1909,7 +2061,7 @@ mkdir budget &amp;&amp; cd budget &amp;&amp; claude
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · Sub-agents</span></div><div class="pagenum">58</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · Sub-agents</span></div><div class="pagenum">59</div></div>
     <div class="eyebrow">Tip · 컨텍스트 분리</div>
     <h2 class="display" style="margin-bottom: 14px;">서브 에이전트가 곧 개발팀원</h2>
     <p class="body lg" style="margin-bottom: 14px;">각 sub-agent는 <em class="italic">독립된 컨텍스트 윈도우</em>를 가집니다. 부모 에이전트는 결과만 받음 — 컨텍스트 오염 없음.</p>
@@ -1934,7 +2086,7 @@ mkdir budget &amp;&amp; cd budget &amp;&amp; claude
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 비용</span></div><div class="pagenum">59</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 비용</span></div><div class="pagenum">60</div></div>
     <div class="eyebrow">2026년 5월 기준 토큰당 가격</div>
     <h2 class="display" style="margin-bottom: 18px;">각 모델의 가격과 특성</h2>
     <table class="tbl">
@@ -1973,7 +2125,7 @@ mkdir budget &amp;&amp; cd budget &amp;&amp; claude
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 모델 선택</span></div><div class="pagenum">60</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 모델 선택</span></div><div class="pagenum">61</div></div>
     <div class="eyebrow">실전 팁 · 모델 라우팅</div>
     <h2 class="display" style="margin-bottom: 18px;">싼 모델을 기본으로, 비싼 모델은 필요할 때만</h2>
 
@@ -2011,7 +2163,7 @@ mkdir budget &amp;&amp; cd budget &amp;&amp; claude
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 실전 팁</span></div><div class="pagenum">61</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 실전 팁</span></div><div class="pagenum">62</div></div>
     <div class="eyebrow">실전 팁 · Plan Mode</div>
     <h2 class="display" style="margin-bottom: 14px;">Plan Mode는 <em class="italic accent-rust">거의 무료</em></h2>
     <p class="body lg" style="margin-bottom: 14px;">Plan Mode는 <em class="italic">읽기 전용 + 짧은 산출물</em>입니다. 입력 토큰만 발생하고, 출력은 계획서 한 장. <em class="italic accent-rust">출력 토큰 부담이 현저히 적습니다</em>.</p>
@@ -2041,7 +2193,7 @@ mkdir budget &amp;&amp; cd budget &amp;&amp; claude
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 함정</span></div><div class="pagenum">62</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 함정</span></div><div class="pagenum">63</div></div>
     <div class="eyebrow">자주 빠지는 함정 5가지</div>
     <h2 class="display" style="margin-bottom: 14px;">멀티 에이전트 ≠ 만능</h2>
     <div class="checklist">
@@ -2060,7 +2212,7 @@ mkdir budget &amp;&amp; cd budget &amp;&amp; claude
 
 <section class="slide layout-divider">
   <div class="inner">
-    <div class="strip invert"><div class="left"><span class="dot"></span><span>Module Five</span></div><div class="pagenum">63</div></div>
+    <div class="strip invert"><div class="left"><span class="dot"></span><span>Module Five</span></div><div class="pagenum">64</div></div>
     <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
       <div class="divider-no">05</div>
       <div class="divider-label">Part Five · 메인 실습</div>
@@ -2071,7 +2223,7 @@ mkdir budget &amp;&amp; cd budget &amp;&amp; claude
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 흐름</span></div><div class="pagenum">64</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 흐름</span></div><div class="pagenum">65</div></div>
     <div class="eyebrow">실습 흐름</div>
     <h2 class="display" style="margin-bottom: 14px;">사전 보일러플레이트 → Codex 멀티에이전트 → 배포 → OAuth</h2>
     <p class="body lg" style="color: var(--ink-soft); margin-bottom: 18px;">Claude Code가 만든 깨끗한 코드베이스 위에서 <em class="italic">Codex가 제품을 채운다</em></p>
@@ -2103,7 +2255,7 @@ mkdir budget &amp;&amp; cd budget &amp;&amp; claude
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 프로젝트</span></div><div class="pagenum">65</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 프로젝트</span></div><div class="pagenum">66</div></div>
     <div class="eyebrow">단일 프로젝트 — 모두 동일</div>
     <h2 class="display" style="margin-bottom: 14px;">네이버 카페-style 게시판</h2>
     <p class="body lg" style="color: var(--ink-soft); margin-bottom: 18px;">한 세션에 완성 가능한 <em class="italic">CRUD + 인증</em> — 그 위에 OAuth를 얹는 구조</p>
@@ -2138,7 +2290,7 @@ mkdir budget &amp;&amp; cd budget &amp;&amp; claude
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 보일러플레이트</span></div><div class="pagenum">66</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 보일러플레이트</span></div><div class="pagenum">67</div></div>
     <div class="practice-meta">
       <span class="pill" style="background: var(--forest); color: white;">Stage A · 사전 제작</span>
       <span class="pill tool">Claude Code</span>
@@ -2182,7 +2334,7 @@ codex    <em style="color:#9CA89F;"># 같은 폴더에서 Codex 시작 — Stage
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · Codex 시작</span></div><div class="pagenum">67</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · Codex 시작</span></div><div class="pagenum">68</div></div>
     <div class="practice-meta">
       <span class="pill">Stage B · 본 실습</span>
       <span class="pill tool">Codex + Superpowers</span>
@@ -2219,7 +2371,7 @@ prd.md, prisma/schema.prisma를 읽고 무엇이 이미 돼있고
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 플랜</span></div><div class="pagenum">68</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 플랜</span></div><div class="pagenum">69</div></div>
     <div class="practice-meta">
       <span class="pill">Stage B</span>
       <span class="pill tool">/superpowers:write-plan</span>
@@ -2260,7 +2412,7 @@ prd.md, prisma/schema.prisma를 읽고 무엇이 이미 돼있고
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 멀티에이전트</span></div><div class="pagenum">69</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 멀티에이전트</span></div><div class="pagenum">70</div></div>
     <div class="practice-meta">
       <span class="pill">Stage B</span>
       <span class="pill tool">/superpowers:execute-plan</span>
@@ -2300,7 +2452,7 @@ prd.md, prisma/schema.prisma를 읽고 무엇이 이미 돼있고
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 검증</span></div><div class="pagenum">70</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 검증</span></div><div class="pagenum">71</div></div>
     <div class="practice-meta">
       <span class="pill">Stage B</span>
       <span class="pill tool">로컬 검증 + git push</span>
@@ -2336,7 +2488,7 @@ git push    <em style="color:#9CA89F;"># Vercel이 push 감지 → 자동 재배
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · Vercel 배포</span></div><div class="pagenum">71</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · Vercel 배포</span></div><div class="pagenum">72</div></div>
     <div class="practice-meta">
       <span class="pill" style="background: var(--forest); color: white;">Stage C · 확장</span>
       <span class="pill tool">Vercel</span>
@@ -2381,7 +2533,7 @@ git push    <em style="color:#9CA89F;"># Vercel이 push 감지 → 자동 재배
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · Google OAuth</span></div><div class="pagenum">72</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · Google OAuth</span></div><div class="pagenum">73</div></div>
     <div class="practice-meta">
       <span class="pill" style="background: var(--forest); color: white;">Stage C · 확장</span>
       <span class="pill tool">Google Cloud · Auth.js</span>
@@ -2429,7 +2581,7 @@ git push    <em style="color:#9CA89F;"># Vercel이 push 감지 → 자동 재배
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · Kakao OAuth</span></div><div class="pagenum">73</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · Kakao OAuth</span></div><div class="pagenum">74</div></div>
     <div class="practice-meta">
       <span class="pill" style="background: var(--forest); color: white;">Stage C · 확장</span>
       <span class="pill tool">Kakao Developers · Auth.js</span>
@@ -2478,7 +2630,7 @@ REST API 키를 AUTH_KAKAO_ID, Client Secret을 AUTH_KAKAO_SECRET으로.
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 재배포</span></div><div class="pagenum">74</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 재배포</span></div><div class="pagenum">75</div></div>
     <div class="practice-meta">
       <span class="pill" style="background: var(--forest); color: white;">Stage C · 확장</span>
       <span class="pill tool">production 검증</span>
@@ -2519,7 +2671,7 @@ git push    <em style="color:#9CA89F;"># 빌드 끝나면 production URL 갱신<
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 회고</span></div><div class="pagenum">75</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 회고</span></div><div class="pagenum">76</div></div>
     <div class="eyebrow">실습 회고</div>
     <h2 class="display" style="margin-bottom: 18px;">사전 보일러플레이트 + 멀티에이전트 + OAuth</h2>
     <div class="grid-2" style="gap: 22px;">
@@ -2551,7 +2703,7 @@ git push    <em style="color:#9CA89F;"># 빌드 끝나면 production URL 갱신<
 
 <section class="slide layout-divider">
   <div class="inner">
-    <div class="strip invert"><div class="left"><span class="dot"></span><span>Module Six</span></div><div class="pagenum">76</div></div>
+    <div class="strip invert"><div class="left"><span class="dot"></span><span>Module Six</span></div><div class="pagenum">77</div></div>
     <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
       <div class="divider-no">06</div>
       <div class="divider-label">Part Six · 현장 추가 실습</div>
@@ -2562,14 +2714,12 @@ git push    <em style="color:#9CA89F;"># 빌드 끝나면 production URL 갱신<
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · 아이디어</span></div><div class="pagenum">77</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · 아이디어</span></div><div class="pagenum">78</div></div>
     <div class="practice-meta">
       <span class="pill">현장 실습</span>
       <span class="pill tool">자유주제 · Stage A부터</span>
     </div>
-    <div class="eyebrow">남은 시간에 끝낼 수 있을 만큼</div>
-    <h2 class="display" style="margin-bottom: 14px;">작게, 더 작게</h2>
-    <p class="body lg" style="color: var(--ink-soft); margin-bottom: 18px;">카페 게시판이 끝났으니 이제 자기 아이디어로 한 사이클 — <em class="italic">1개 핵심 기능</em>만</p>
+    <h2 class="display" style="margin-bottom: 18px;">자기 아이디어 · 1개 핵심 기능</h2>
 
     <div class="grid-2" style="gap: 22px; flex: none;">
       <div style="padding: 18px 22px; background: var(--paper-2); border-top: 3px solid var(--rust);">
@@ -2602,14 +2752,12 @@ git push    <em style="color:#9CA89F;"># 빌드 끝나면 production URL 갱신<
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · 보일러플레이트</span></div><div class="pagenum">78</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · 보일러플레이트</span></div><div class="pagenum">79</div></div>
     <div class="practice-meta">
       <span class="pill">현장 실습</span>
       <span class="pill tool">Stage A · 직접 빌드</span>
     </div>
-    <div class="eyebrow">본 실습에선 받았고 — 이번엔 직접</div>
-    <h2 class="display" style="margin-bottom: 10px;">보일러플레이트부터 시작</h2>
-    <p class="body lg" style="color: var(--ink-soft); margin-bottom: 14px;">카페에선 Stage B부터 들어갔지만, 자유주제에선 <em class="italic accent-rust">Stage A를 직접</em> — Claude Code로 PRD부터 첫 배포까지</p>
+    <h2 class="display" style="margin-bottom: 18px;">보일러플레이트부터 시작</h2>
 
     <div class="num-list" style="flex: none; gap: 8px;">
       <div class="item" style="align-items: start;">
@@ -2651,14 +2799,12 @@ git push    <em style="color:#9CA89F;"># 빌드 끝나면 production URL 갱신<
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · 한 사이클</span></div><div class="pagenum">79</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · 한 사이클</span></div><div class="pagenum">80</div></div>
     <div class="practice-meta">
       <span class="pill">현장 실습</span>
       <span class="pill tool">Stage A → B → 배포</span>
     </div>
-    <div class="eyebrow">남은 시간 안에 — 자기 아이디어를 production까지</div>
-    <h2 class="display" style="margin-bottom: 10px;">현장에서 한 사이클</h2>
-    <p class="body lg" style="margin-bottom: 14px; color: var(--ink-soft);">Stage A부터 OAuth까진 못 가더라도 — <em class="italic accent-rust">아이디어 → 보일러플레이트 → 멀티에이전트 → 배포</em>까지 한 사이클</p>
+    <h2 class="display" style="margin-bottom: 18px;">현장에서 한 사이클</h2>
 
     <div class="checklist" style="flex: none;">
       <div class="row"><div class="mk">◆</div><div class="tx"><strong>아이디어 압축</strong> · 1줄 + 도메인 3개 결정 <em style="color:var(--muted);font-size:12.5px;">— 욕심나면 한 번 더 깎기</em></div></div>
@@ -2684,7 +2830,7 @@ git push    <em style="color:#9CA89F;"># 빌드 끝나면 production URL 갱신<
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Q &amp; A</span></div><div class="pagenum">80</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Q &amp; A</span></div><div class="pagenum">81</div></div>
     <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
       <h1 class="cover-title" style="font-size: 120px; margin-bottom: 18px;">Q &amp; A</h1>
       <div class="cover-rule" style="max-width: 240px; margin-bottom: 22px;"></div>
