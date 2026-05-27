@@ -1941,325 +1941,187 @@ ln -s ~/.codex/superpowers/skills ~/.agents/skills/superpowers
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 시작점</span></div><div class="pagenum">64</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 흐름</span></div><div class="pagenum">64</div></div>
     <div class="eyebrow">실습 흐름</div>
-    <h2 class="display" style="margin-bottom: 14px;">Claude → Stitch → Codex 핸드오프</h2>
-    <p class="body lg" style="color: var(--ink-soft); margin-bottom: 18px;">두 도구가 역할을 나눠 협업 — 인프라(Claude)와 제품(Codex) 분리</p>
+    <h2 class="display" style="margin-bottom: 14px;">사전 보일러플레이트 → Codex 멀티에이전트 → 배포 → OAuth</h2>
+    <p class="body lg" style="color: var(--ink-soft); margin-bottom: 18px;">Claude Code가 만든 깨끗한 코드베이스 위에서 <em class="italic">Codex가 제품을 채운다</em></p>
 
     <div class="grid-3" style="flex: none; gap: 14px;">
-      <div style="padding: 20px 22px; background: var(--paper-2); border-top: 3px solid var(--rust);">
-        <div class="eyebrow">Stage A</div>
-        <h4 class="display" style="font-size: 17px; margin-bottom: 8px;">Claude Code</h4>
-        <p class="body sm" style="color: var(--ink-soft);">자연어 프롬프트로<br>보일러플레이트 + 인프라<br><em class="italic">PRD → 빌드 → DB → GitHub → Vercel</em></p>
-      </div>
       <div style="padding: 20px 22px; background: var(--paper-2); border-top: 3px solid var(--forest);">
-        <div class="eyebrow forest">Bridge</div>
-        <h4 class="display" style="font-size: 17px; margin-bottom: 8px;">Stitch</h4>
-        <p class="body sm" style="color: var(--ink-soft);">와이어프레임 스케치<br>→ <em class="italic">design.md</em> 정리<br>(손스케치도 OK)</p>
+        <div class="eyebrow forest">Stage A · 사전</div>
+        <h4 class="display" style="font-size: 17px; margin-bottom: 8px;">Claude Code 보일러플레이트</h4>
+        <p class="body sm" style="color: var(--ink-soft);">미리 제작된 베이스 — Next.js 15 + Prisma + Auth.js<br><em class="italic">git clone 하면 바로 시작</em></p>
       </div>
       <div style="padding: 20px 22px; background: var(--paper-2); border-top: 3px solid var(--rust);">
-        <div class="eyebrow">Stage B</div>
+        <div class="eyebrow">Stage B · 본 실습</div>
         <h4 class="display" style="font-size: 17px; margin-bottom: 8px;">Codex + Superpowers</h4>
-        <p class="body sm" style="color: var(--ink-soft);">prd.md · design.md 인수<br>→ <em class="italic">/superpowers:execute-plan</em><br>멀티에이전트 병렬 구현</p>
+        <p class="body sm" style="color: var(--ink-soft);">PRD 인수 → <em class="italic">/superpowers:execute-plan</em><br>멀티에이전트로 회원·글·댓글 CRUD 병렬 구현</p>
+      </div>
+      <div style="padding: 20px 22px; background: var(--paper-2); border-top: 3px solid var(--rust);">
+        <div class="eyebrow">Stage C · 확장</div>
+        <h4 class="display" style="font-size: 17px; margin-bottom: 8px;">Vercel · OAuth</h4>
+        <p class="body sm" style="color: var(--ink-soft);">라이브 URL 확보 → <em class="italic">그 도메인</em>으로<br>Google · Kakao 로그인 추가</p>
       </div>
     </div>
 
     <div class="callout" style="margin-top: 18px;">
-      <div class="label">왜 둘로 나누나</div>
-      <div class="text"><em class="italic">컨텍스트 분리</em> — Claude는 인프라까지만, Codex는 깨끗한 코드베이스 받아 제품 구현에 집중. 토큰 효율 + 역할 명확.</div>
+      <div class="label">왜 보일러플레이트를 미리</div>
+      <div class="text"><em class="italic">셋업이 90%, 토큰이 70%</em> — Claude로 미리 깔아두면 워크샵 시간엔 멀티에이전트 실습 본론에 집중. <em class="italic accent-rust">OAuth는 배포된 도메인이 있어야 하므로</em> 자연스레 마지막 단계.</div>
     </div>
   </div>
 </section>
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 프로젝트 선택</span></div><div class="pagenum">65</div></div>
-    <div class="eyebrow">3가지 옵션 — 1개 선택</div>
-    <h2 class="display" style="margin-bottom: 14px;">무엇을 만들 것인가</h2>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 프로젝트</span></div><div class="pagenum">65</div></div>
+    <div class="eyebrow">단일 프로젝트 — 모두 동일</div>
+    <h2 class="display" style="margin-bottom: 14px;">네이버 카페-style 게시판</h2>
+    <p class="body lg" style="color: var(--ink-soft); margin-bottom: 18px;">한 세션에 완성 가능한 <em class="italic">CRUD + 인증</em> — 그 위에 OAuth를 얹는 구조</p>
+
     <div class="grid-3" style="flex: none; gap: 14px;">
       <div style="padding: 22px 24px; background: var(--paper-2); border-top: 3px solid var(--rust);">
-        <div class="eyebrow">옵션 A · 🥇 추천</div>
-        <h4 class="display" style="margin-bottom: 8px;">Mini Trello</h4>
-        <p class="body sm" style="color: var(--ink-soft);">보드 + 컬럼 + 카드 · DnD 우선순위 · 공유 가능</p>
-        <p style="font-family: var(--mono); font-size: 11px; color: var(--rust); margin-top: 10px;">Board · Column · Card</p>
+        <div class="eyebrow">도메인 모델</div>
+        <h4 class="display" style="margin-bottom: 8px;">User · Post · Comment</h4>
+        <p class="body sm" style="color: var(--ink-soft);">사용자는 글을 쓰고, 글에는 댓글이 달린다. 그게 전부.</p>
+        <p style="font-family: var(--mono); font-size: 11px; color: var(--rust); margin-top: 10px;">User → Post → Comment</p>
       </div>
       <div style="padding: 22px 24px; background: var(--paper-2); border-top: 3px solid var(--rust);">
-        <div class="eyebrow">옵션 B</div>
-        <h4 class="display" style="margin-bottom: 8px;">Quiz Builder</h4>
-        <p class="body sm" style="color: var(--ink-soft);">퀴즈 작성 · 공유 링크 · 풀기 · 점수 통계</p>
-        <p style="font-family: var(--mono); font-size: 11px; color: var(--rust); margin-top: 10px;">Quiz · Question · Answer</p>
+        <div class="eyebrow">핵심 CRUD</div>
+        <h4 class="display" style="margin-bottom: 8px;">회원·글·댓글</h4>
+        <p class="body sm" style="color: var(--ink-soft);">회원가입 · 이메일 로그인 · 글 작성/수정/삭제 · 댓글 작성</p>
+        <p style="font-family: var(--mono); font-size: 11px; color: var(--rust); margin-top: 10px;">Credentials Auth</p>
       </div>
-      <div style="padding: 22px 24px; background: var(--paper-2); border-top: 3px solid var(--rust);">
-        <div class="eyebrow">옵션 C</div>
-        <h4 class="display" style="margin-bottom: 8px;">Habit + 공개</h4>
-        <p class="body sm" style="color: var(--ink-soft);">습관 트래킹 · 친구 응원 · 공개 진행률</p>
-        <p style="font-family: var(--mono); font-size: 11px; color: var(--rust); margin-top: 10px;">User · Habit · Check</p>
+      <div style="padding: 22px 24px; background: var(--paper-2); border-top: 3px solid var(--forest);">
+        <div class="eyebrow forest">확장 (Stage C)</div>
+        <h4 class="display" style="margin-bottom: 8px;">Google · Kakao 로그인</h4>
+        <p class="body sm" style="color: var(--ink-soft);">배포된 도메인을 콜백 URL로 등록 → OAuth Provider 추가</p>
+        <p style="font-family: var(--mono); font-size: 11px; color: var(--forest); margin-top: 10px;">OAuth Providers</p>
       </div>
     </div>
+
     <div class="callout" style="margin-top: 22px;">
       <div class="label">기준</div>
-      <div class="text">한 세션에 완성 가능한 <em class="italic">CRUD + 도메인 한 가지 트위스트</em>. 너무 욕심 부리지 않는 게 핵심.</div>
+      <div class="text">화려함보다 <em class="italic">동작하는 흐름</em> — 회원가입 → 글쓰기 → 댓글 → 배포 → 소셜로그인. 디자인은 shadcn 기본으로 충분.</div>
     </div>
   </div>
 </section>
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · A-1 · PRD</span></div><div class="pagenum">66</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 보일러플레이트</span></div><div class="pagenum">66</div></div>
     <div class="practice-meta">
-      <span class="pill">Stage A</span>
-      <span class="pill tool">Claude Code · 자연어</span>
-    </div>
-    <h3 class="display" style="margin-bottom: 14px;">A-1 · PRD 작성</h3>
-    <p class="body lg" style="color: var(--ink-soft); margin-bottom: 14px;">슬래시 명령어 없이 — Claude에게 자연어로 대화하며 <em class="italic">prd.md</em> 생성</p>
-    <div class="prompt-box">
-<span class="you">▶ 프로젝트 폴더에서 Claude Code 시작</span>
-mkdir my-trello &amp;&amp; cd my-trello
-claude
-
-<span class="you">▶ 자연어 대화</span>
-"Mini Trello를 만들 거야. Next.js + Tailwind + Prisma + Postgres 스택.
-Board → Column → Card 구조, 카드 DnD, Clerk 인증.
-PRD를 prd.md로 정리해줘 — 사용자 스토리, 모델, API 엔드포인트 위주로."
-
-<span class="ai">→ Claude</span>
-📝 prd.md 작성 중...
-   - 사용자 스토리 (5개)
-   - 데이터 모델: Board · Column · Card
-   - API 엔드포인트: 8개
-   - 라우트: /boards, /boards/[id]
-   - 인증 흐름: Clerk middleware
-    </div>
-  </div>
-</section>
-
-<section class="slide">
-  <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · A-2 · 보일러플레이트</span></div><div class="pagenum">67</div></div>
-    <div class="practice-meta">
-      <span class="pill">Stage A</span>
+      <span class="pill" style="background: var(--forest); color: white;">Stage A · 사전 제작</span>
       <span class="pill tool">Claude Code</span>
     </div>
-    <h3 class="display" style="margin-bottom: 14px;">A-2 · 보일러플레이트 빌드</h3>
-    <p class="body lg" style="color: var(--ink-soft); margin-bottom: 14px;">Claude의 <em class="italic">이것저것 도구</em>를 한꺼번에 시연 — web_search · bash · write · read</p>
+    <h3 class="display" style="margin-bottom: 10px;">보일러플레이트에 무엇이 들어있나</h3>
+    <p class="body" style="color: var(--ink-soft); margin-bottom: 14px;">워크샵 시작 전 Claude Code가 PRD부터 빈 화면 배포까지 끝내둔 상태 — <em class="italic">git clone 하면 바로 Codex로 합류</em></p>
 
-    <div class="grid-2" style="gap: 16px;">
+    <div class="grid-2" style="gap: 16px; flex: none;">
       <div style="padding: 14px 18px; background: var(--paper-2); border-left: 3px solid var(--rust);">
-        <div class="eyebrow">사용되는 도구</div>
-        <ul style="font-size: 13px; line-height: 1.75; color: var(--ink-soft); padding-left: 18px; margin-top: 6px;">
-          <li><em class="italic">web_search</em> — Next.js 15 최신 셋업 확인</li>
-          <li><em class="italic">bash</em> — npx, npm install 실행</li>
-          <li><em class="italic">write</em> — 파일 생성</li>
-          <li><em class="italic">read</em> — 결과 검증</li>
-        </ul>
-      </div>
-      <div style="padding: 14px 18px; background: var(--paper-2); border-left: 3px solid var(--forest);">
-        <div class="eyebrow forest">완성 골격</div>
+        <div class="eyebrow">미리 깔린 스택</div>
         <ul style="font-size: 13px; line-height: 1.75; color: var(--ink-soft); padding-left: 18px; margin-top: 6px;">
           <li>Next.js 15 (App Router) + TypeScript</li>
           <li>Tailwind + shadcn/ui 베이스</li>
-          <li>빈 페이지: /, /dashboard</li>
-          <li>CLAUDE.md + AGENTS.md</li>
+          <li>Prisma + Postgres (Vercel 연결)</li>
+          <li><em class="italic">Auth.js v5 (NextAuth) skeleton</em> — Credentials provider 자리</li>
+          <li>빈 라우트: <code style="font-family:var(--mono);font-size:12px;">/</code>, <code style="font-family:var(--mono);font-size:12px;">/login</code>, <code style="font-family:var(--mono);font-size:12px;">/posts</code></li>
+        </ul>
+      </div>
+      <div style="padding: 14px 18px; background: var(--paper-2); border-left: 3px solid var(--forest);">
+        <div class="eyebrow forest">미리 정리된 문서</div>
+        <ul style="font-size: 13px; line-height: 1.75; color: var(--ink-soft); padding-left: 18px; margin-top: 6px;">
+          <li><em class="italic">prd.md</em> — 사용자 스토리·모델·API</li>
+          <li><em class="italic">CLAUDE.md / AGENTS.md</em> — 룰 파일</li>
+          <li><em class="italic">prisma/schema.prisma</em> — User · Post · Comment</li>
+          <li><em class="italic">.env.example</em> — DATABASE_URL · AUTH_SECRET 자리</li>
+          <li>첫 Vercel 배포본 (빈 페이지) — 라이브 URL 있음</li>
         </ul>
       </div>
     </div>
 
     <div class="prompt-box" style="margin-top: 14px;">
-<span class="you">▶ 자연어 프롬프트</span>
-"prd.md 봤어. 이제 보일러플레이트를 만들자. 최신 Next.js 셋업 확인하고
-shadcn/ui 베이스까지 깔아줘. CLAUDE.md도 적어두고."
+<span class="you">▶ 참가자가 워크샵 시작 시 하는 것</span>
+git clone https://github.com/&lt;강사&gt;/cafe-boilerplate.git my-cafe
+cd my-cafe &amp;&amp; npm install
+cp .env.example .env.local    <em style="color:#9CA89F;"># DATABASE_URL · AUTH_SECRET 채우기</em>
+npx prisma generate &amp;&amp; npx prisma db push
+codex    <em style="color:#9CA89F;"># 같은 폴더에서 Codex 시작 — Stage B로 진입</em>
     </div>
   </div>
 </section>
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · A-3 · DB</span></div><div class="pagenum">68</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · Codex 시작</span></div><div class="pagenum">67</div></div>
     <div class="practice-meta">
-      <span class="pill">Stage A</span>
-      <span class="pill tool">Prisma + Postgres</span>
-    </div>
-    <h3 class="display" style="margin-bottom: 14px;">A-3 · 데이터베이스 연결</h3>
-    <p class="body lg" style="color: var(--ink-soft); margin-bottom: 14px;">Vercel Postgres 무료 티어 + Prisma — Claude가 환경변수까지 셋업</p>
-    <div class="prompt-box">
-<span class="you">▶ Claude에게</span>
-"Vercel Postgres로 DB 연결하자. Prisma 스키마는 prd.md의 모델 그대로 —
-Board, Column, Card. 환경변수 템플릿(.env.example) 만들고
-로컬에선 SQLite로 fallback되게 해줘."
-
-<span class="ai">→ Claude</span>
-📦 prisma 설치 + init
-📝 prisma/schema.prisma 작성
-🔧 .env.example 생성 (DATABASE_URL 자리)
-📝 src/lib/db.ts — Prisma client singleton
-🔧 npx prisma generate + db push (로컬 SQLite 검증)
-    </div>
-    <div class="callout" style="margin-top: 14px;">
-      <div class="label">실제 DB는 Vercel에서</div>
-      <div class="text">로컬은 SQLite로 빠르게 검증. Vercel Postgres는 <em class="italic accent-rust">A-5 배포 시 마켓플레이스에서 한 번 클릭</em>으로 연결.</div>
-    </div>
-  </div>
-</section>
-
-<section class="slide">
-  <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · A-4 · GitHub</span></div><div class="pagenum">69</div></div>
-    <div class="practice-meta">
-      <span class="pill">Stage A</span>
-      <span class="pill tool">gh CLI</span>
-    </div>
-    <h3 class="display" style="margin-bottom: 14px;">A-4 · GitHub 등록 + 첫 푸시</h3>
-    <div class="prompt-box">
-<span class="you">▶ Claude에게</span>
-"GitHub repo 만들고 첫 커밋 푸시해줘.
-.gitignore에 .env*는 빠지게."
-
-<span class="ai">→ Claude (bash 도구 사용)</span>
-🔧 git init
-🔧 git add . && git commit -m "Initial boilerplate"
-🔧 gh repo create my-trello --public --source=. --push
-✅ <em style="color:#B0C8B5;">https://github.com/&lt;user&gt;/my-trello</em>
-
-<span class="you">▶ 확인</span>
-gh repo view --web    <em style="color:#9CA89F;"># 브라우저에서 확인</em>
-    </div>
-    <div class="callout" style="margin-top: 14px;">
-      <div class="label">gh CLI 필요</div>
-      <div class="text">없으면 <em class="italic">brew install gh / winget install GitHub.cli</em>로 설치. <em class="italic accent-rust">gh auth login</em> 으로 인증.</div>
-    </div>
-  </div>
-</section>
-
-<section class="slide">
-  <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · A-5 · Vercel 배포</span></div><div class="pagenum">70</div></div>
-    <div class="practice-meta">
-      <span class="pill">Stage A</span>
-      <span class="pill tool">Vercel</span>
-    </div>
-    <h3 class="display" style="margin-bottom: 14px;">A-5 · Vercel 첫 배포</h3>
-    <p class="body lg" style="color: var(--ink-soft); margin-bottom: 14px;">빈 보일러플레이트지만 — <em class="italic">라이브 URL 확보</em>가 인수인계 전 핵심</p>
-    <div class="prompt-box">
-<span class="you">▶ Vercel 연결 (vercel.com 또는 CLI)</span>
-npm i -g vercel    <em style="color:#9CA89F;"># 최초 1회</em>
-vercel login
-vercel              <em style="color:#9CA89F;"># 프로젝트 import → 환경변수 입력</em>
-
-<span class="you">▶ DB 연결 — Vercel 대시보드</span>
-Storage 탭 → Marketplace → <em style="color:#EBE2CD;">Prisma Postgres</em> 추가
-<em style="color:#9CA89F;"># DATABASE_URL 환경변수 자동 set</em>
-
-<span class="you">▶ 첫 deploy</span>
-vercel --prod
-🌐 <em style="color:#B0C8B5;">https://my-trello-&lt;user&gt;.vercel.app</em>
-    </div>
-    <div class="callout" style="margin-top: 14px;">
-      <div class="label">Stage A 끝</div>
-      <div class="text">라이브 URL · GitHub 리포 · Prisma 스키마 — 이제 <em class="italic accent-rust">Codex가 받아갈 준비 완료</em>.</div>
-    </div>
-  </div>
-</section>
-
-<section class="slide">
-  <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · Bridge · Stitch</span></div><div class="pagenum">71</div></div>
-    <div class="practice-meta">
-      <span class="pill" style="background: var(--forest); color: white;">Bridge</span>
-      <span class="pill tool">Stitch (Google · Beta)</span>
-    </div>
-    <h3 class="display" style="margin-bottom: 14px;">디자인 스케치 → design.md</h3>
-    <p class="body lg" style="color: var(--ink-soft); margin-bottom: 14px;">Stitch로 와이어프레임 → 디자인 토큰·컴포넌트 목록을 <em class="italic">design.md</em>로 정리</p>
-
-    <div class="grid-2" style="gap: 16px;">
-      <div style="padding: 14px 18px; background: var(--paper-2); border-left: 3px solid var(--forest);">
-        <div class="eyebrow forest">Stitch에서</div>
-        <ul style="font-size: 13px; line-height: 1.75; color: var(--ink-soft); padding-left: 18px; margin-top: 6px;">
-          <li>"Mini Trello 보드 화면" 프롬프트</li>
-          <li>3~4개 화면 스케치 생성</li>
-          <li>스크린샷 저장 (PNG)</li>
-        </ul>
-        <p class="body sm" style="color: var(--muted); margin-top: 8px; font-style: italic;">손스케치 · Excalidraw도 OK</p>
-      </div>
-      <div style="padding: 14px 18px; background: var(--paper-2); border-left: 3px solid var(--rust);">
-        <div class="eyebrow">design.md 구조</div>
-        <ul style="font-size: 13px; line-height: 1.75; color: var(--ink-soft); padding-left: 18px; margin-top: 6px;">
-          <li>컬러 토큰 (Primary · BG · Text)</li>
-          <li>타이포 (폰트 · 크기)</li>
-          <li>레이아웃 (Header · Sidebar · Main)</li>
-          <li>컴포넌트 목록 (Board, Column, Card …)</li>
-          <li>인터랙션 (DnD · 호버 · Dialog)</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="callout" style="margin-top: 14px;">
-      <div class="label">팁</div>
-      <div class="text">스케치 PNG는 <em class="italic">/design/</em> 폴더에 두고 design.md 마지막에 경로 명시. Codex가 이미지를 직접 못 봐도 design.md만 보면 충분.</div>
-    </div>
-  </div>
-</section>
-
-<section class="slide">
-  <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · B-1 · 인수인계</span></div><div class="pagenum">72</div></div>
-    <div class="practice-meta">
-      <span class="pill">Stage B</span>
+      <span class="pill">Stage B · 본 실습</span>
       <span class="pill tool">Codex + Superpowers</span>
     </div>
-    <h3 class="display" style="margin-bottom: 14px;">B-1 · Codex 인수인계</h3>
-    <p class="body lg" style="color: var(--ink-soft); margin-bottom: 14px;">같은 폴더에서 Codex 시작 — prd.md · design.md · 보일러플레이트를 자동 로드</p>
-    <div class="prompt-box">
-<span class="you">▶ 같은 폴더에서</span>
-codex    <em style="color:#9CA89F;"># Codex CLI 시작</em>
+    <h3 class="display" style="margin-bottom: 10px;">B-1 · Codex 시작 + 인수인계</h3>
+    <p class="body" style="color: var(--ink-soft); margin-bottom: 14px;">같은 폴더에서 <em class="italic">codex</em> — AGENTS.md · prd.md · prisma 스키마를 자동 인수</p>
 
-<span class="you">▶ Superpowers 동작 확인 (이미 설치돼있다고 가정)</span>
-/skills    <em style="color:#9CA89F;"># 또는 자연어로 "what skills available"</em>
-<em style="color:#B0C8B5;"># using-superpowers 가 활성 상태인지 확인</em>
+    <div class="prompt-box" style="font-size: 11.5px;">
+<span class="you">▶ 보일러플레이트 폴더 안에서</span>
+codex    <em style="color:#9CA89F;"># Codex CLI 시작 — AGENTS.md 자동 로드</em>
+
+<span class="you">▶ Superpowers 동작 확인</span>
+/skills    <em style="color:#9CA89F;"># using-superpowers 활성 상태인지 확인</em>
 
 <span class="you">▶ 핸드오프 컨텍스트 주입 (자연어)</span>
-"Claude Code가 만든 보일러플레이트야. prd.md와 design.md를 읽고
-무엇이 이미 돼있고 무엇을 만들어야 하는지 정리해줘."
+"Claude Code가 만든 네이버 카페-style 게시판 보일러플레이트야.
+prd.md, prisma/schema.prisma를 읽고 무엇이 이미 돼있고
+무엇을 만들어야 하는지 정리해줘."
 
 <span class="ai">→ Codex</span>
-📖 prd.md 읽음 — 사용자 스토리·모델·API
-📖 design.md 읽음 — 디자인 토큰·컴포넌트
-📖 prisma/schema.prisma — Board·Column·Card 있음
-✅ 인수 완료 — 다음 단계 준비됨
+📖 AGENTS.md · prd.md 인수 — User · Post · Comment 도메인
+📖 prisma/schema.prisma — 모델 정의 완료, 마이그레이션 OK
+📖 src/auth.ts — Auth.js v5 skeleton (Credentials provider 자리)
+🔍 빈 라우트 확인: /, /login, /signup, /posts, /posts/[id]
+✅ 미구현 영역: 회원가입·로그인 핸들러 · 게시글/댓글 CRUD · UI
+    </div>
+
+    <div class="callout" style="margin-top: 12px;">
+      <div class="label">왜 Codex가 잘 받아가나</div>
+      <div class="text">Claude가 남긴 <em class="italic">AGENTS.md</em>는 두 도구 공통 규약 — Codex가 첫 부팅에 자동 import. <em class="italic accent-rust">컨텍스트 비용 0</em>.</div>
     </div>
   </div>
 </section>
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · B-2 · 플랜</span></div><div class="pagenum">73</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 플랜</span></div><div class="pagenum">68</div></div>
     <div class="practice-meta">
       <span class="pill">Stage B</span>
       <span class="pill tool">/superpowers:write-plan</span>
     </div>
-    <h3 class="display" style="margin-bottom: 10px;">B-2 · Codex 구현 계획</h3>
-    <p class="body" style="color: var(--ink-soft); margin-bottom: 10px;">prd.md + design.md → <em class="italic accent-rust">.planning/IMPL_PLAN.md</em> 자동 생성. 작업을 chunk로 분해.</p>
-    <div class="prompt-box" style="font-size: 11px; line-height: 1.5; padding: 12px 16px;">
+    <h3 class="display" style="margin-bottom: 10px;">B-2 · 작업 분해 — 회원·글·댓글</h3>
+    <p class="body" style="color: var(--ink-soft); margin-bottom: 10px;">prd.md + schema.prisma → <em class="italic accent-rust">.planning/IMPL_PLAN.md</em> 자동 생성. 각 chunk가 sub-agent 1명 분량.</p>
+    <div class="prompt-box" style="font-size: 11px; line-height: 1.55; padding: 12px 16px;">
 <span class="you">▶ Superpowers 플랜 명령</span>
 /superpowers:write-plan
 
 <span class="ai">→ Codex (writing-plans 스킬 자동 트리거)</span>
 📝 .planning/IMPL_PLAN.md 작성:
 
-  Chunk 1 · API 라우트 (3개)
-    - POST /api/boards · GET /api/boards · GET /api/boards/[id]
-    - 테스트: 인증된 사용자만 자기 보드 조회
+  Chunk 1 · 인증 — 회원가입 / 이메일 로그인
+    - Auth.js Credentials provider · bcrypt 해싱
+    - POST /api/auth/signup · /api/auth/[...nextauth]
+    - 테스트: 가입 → 로그인 → 세션 발급
 
-  Chunk 2 · 도메인 UI
-    - BoardCard · ColumnList · CardItem 컴포넌트
-    - design.md 토큰 적용
+  Chunk 2 · 게시글 CRUD
+    - GET / POST /api/posts · GET / PATCH / DELETE /api/posts/[id]
+    - 페이지: /posts 목록, /posts/new 작성, /posts/[id] 상세
+    - 테스트: 본인 글만 수정·삭제 가능
 
-  Chunk 3 · DnD 인터랙션
-    - dnd-kit 추가
-    - POST /api/cards/move
+  Chunk 3 · 댓글 CRUD
+    - POST /api/posts/[id]/comments · DELETE /api/comments/[id]
+    - 상세 페이지 하단 인라인 폼
+    - 테스트: 비로그인 차단
 
-  Chunk 4 · 인증 가드
-    - Clerk middleware
-    - 미들웨어 테스트
+  Chunk 4 · 인증 가드 + UI 쉘
+    - middleware.ts — /posts/new, /api/posts 보호
+    - 헤더 (로그인 상태 표시), 폼 컴포넌트
+    - 테스트: 미들웨어 단위 테스트
 
 ✅ 4개 chunk · 각 chunk에 TDD 적용 예정
     </div>
@@ -2268,13 +2130,14 @@ codex    <em style="color:#9CA89F;"># Codex CLI 시작</em>
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · B-3 · 멀티에이전트</span></div><div class="pagenum">74</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 멀티에이전트</span></div><div class="pagenum">69</div></div>
     <div class="practice-meta">
       <span class="pill">Stage B</span>
       <span class="pill tool">/superpowers:execute-plan</span>
     </div>
     <h3 class="display" style="margin-bottom: 10px;">B-3 · 멀티에이전트 병렬 실행</h3>
-    <p class="body" style="color: var(--ink-soft); margin-bottom: 10px;">한 명령으로 sub-agents 병렬 분배 — 각 chunk에 TDD 자동 적용</p>
+    <p class="body" style="color: var(--ink-soft); margin-bottom: 10px;">한 명령으로 sub-agents 병렬 dispatch — chunk별로 TDD가 자동 적용</p>
+
     <div class="prompt-box" style="font-size: 10.5px; line-height: 1.5; padding: 12px 16px;">
 <span class="you">▶ 실행</span>
 /superpowers:execute-plan
@@ -2282,25 +2145,244 @@ codex    <em style="color:#9CA89F;"># Codex CLI 시작</em>
 <span class="ai">→ Codex (subagent-driven-development + TDD 자동)</span>
 🚀 4개 sub-agent 병렬 dispatch:
 
-  Agent #1 · API 라우트
-    🔴 RED: 테스트 작성 (인증·CRUD)
-    🟢 GREEN: 최소 구현
-    ✅ commit: "feat(api): boards CRUD with auth"
+  Agent #1 · 인증 (회원가입 + 로그인)
+    🔴 RED: signup·login 통합 테스트 (해싱·세션)
+    🟢 GREEN: Auth.js Credentials provider + bcrypt
+    ✅ commit: "feat(auth): credentials signup + login"
 
-  Agent #2 · UI 컴포넌트 (design.md 참조)
-    🔴 RED: 렌더 테스트
-    🟢 GREEN: shadcn 베이스 + 디자인 토큰 적용
-    ✅ commit: "feat(ui): board components"
+  Agent #2 · 게시글 CRUD
+    🔴 RED: 작성·조회·수정·삭제 + 권한 테스트
+    🟢 GREEN: /api/posts · /posts UI (목록·상세·작성)
+    ✅ commit: "feat(posts): CRUD with author guard"
 
-  Agent #3 · DnD       · 🔴 RED · 🟢 GREEN · ✅
-  Agent #4 · 인증 가드  · 🔴 RED · 🟢 GREEN · ✅
+  Agent #3 · 댓글       · 🔴 RED · 🟢 GREEN · ✅ commit
+  Agent #4 · 미들웨어   · 🔴 RED · 🟢 GREEN · ✅ commit
 
-🌐 git push → Vercel 자동 재배포 → 라이브 URL 갱신
+✅ 4 chunk 완료 — 모든 테스트 통과
     </div>
 
     <div class="callout" style="margin-top: 10px; padding: 8px 14px;">
-      <div class="label">⚙️ 토큰 부족 시 (Path A 대안)</div>
-      <div class="text" style="font-size: 13px;">UI 컴포넌트만 <em class="italic accent-rust">v0.dev</em>에 design.md 붙여넣어 외주 → 결과물 Codex에 가져와 통합. 토큰 절약.</div>
+      <div class="label">⚙️ 토큰 부족 시 (대안)</div>
+      <div class="text" style="font-size: 13px;">UI 컴포넌트만 <em class="italic accent-rust">v0.dev</em>에 prd 일부 붙여 외주 → 결과물을 Codex에 가져와 통합. API/인증은 Codex에 남겨두기.</div>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="inner">
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 검증</span></div><div class="pagenum">70</div></div>
+    <div class="practice-meta">
+      <span class="pill">Stage B</span>
+      <span class="pill tool">로컬 검증 + git push</span>
+    </div>
+    <h3 class="display" style="margin-bottom: 10px;">B-4 · 로컬 검증 + 푸시</h3>
+    <p class="body" style="color: var(--ink-soft); margin-bottom: 14px;">멀티에이전트 결과물을 <em class="italic">한 사이클로 직접 사용</em>해보고 push → Vercel 자동 재배포 트리거</p>
+
+    <div class="prompt-box" style="font-size: 11.5px;">
+<span class="you">▶ 로컬 서버</span>
+npm run dev    <em style="color:#9CA89F;"># http://localhost:3000</em>
+
+<span class="you">▶ 사람 손으로 한 사이클 — 5분</span>
+1. /signup → 이메일·비번으로 가입
+2. /login → 세션 정상
+3. /posts/new → 글 작성 → /posts에 표시
+4. /posts/[id] → 댓글 달기
+5. 다른 사용자로 가입 → 남의 글 수정 시도 차단 확인
+
+<span class="you">▶ 테스트 일괄 실행</span>
+npm test    <em style="color:#9CA89F;"># Agent들이 작성한 RED→GREEN 테스트 통과 확인</em>
+
+<span class="you">▶ 푸시</span>
+git add . &amp;&amp; git commit -m "feat: cafe CRUD with credentials auth"
+git push    <em style="color:#9CA89F;"># Vercel이 push 감지 → 자동 재배포 시작</em>
+    </div>
+
+    <div class="callout" style="margin-top: 12px;">
+      <div class="label">왜 사람 검증이 필요한가</div>
+      <div class="text">테스트가 다 녹색이어도 <em class="italic accent-rust">UX는 직접 클릭해봐야</em> 보인다. 멀티에이전트 산출물 회수의 핵심 의례.</div>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="inner">
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · Vercel 배포</span></div><div class="pagenum">71</div></div>
+    <div class="practice-meta">
+      <span class="pill" style="background: var(--forest); color: white;">Stage C · 확장</span>
+      <span class="pill tool">Vercel</span>
+    </div>
+    <h3 class="display" style="margin-bottom: 10px;">C-1 · Vercel 배포 — 라이브 URL 확보</h3>
+    <p class="body" style="color: var(--ink-soft); margin-bottom: 14px;">보일러플레이트 단계에서 이미 import된 Vercel 프로젝트 — push 한 번으로 production이 갱신된다</p>
+
+    <div class="grid-2" style="gap: 16px; flex: none;">
+      <div style="padding: 14px 18px; background: var(--paper-2); border-left: 3px solid var(--rust);">
+        <div class="eyebrow">자동으로 일어나는 일</div>
+        <ul style="font-size: 13px; line-height: 1.75; color: var(--ink-soft); padding-left: 18px; margin-top: 6px;">
+          <li>main 푸시 → Vercel 빌드 시작</li>
+          <li>prisma migrate deploy (postinstall)</li>
+          <li>preview URL → production URL 승격</li>
+          <li>빌드 로그·도메인 대시보드에서 확인</li>
+        </ul>
+      </div>
+      <div style="padding: 14px 18px; background: var(--paper-2); border-left: 3px solid var(--forest);">
+        <div class="eyebrow forest">사람이 한 번만 확인</div>
+        <ul style="font-size: 13px; line-height: 1.75; color: var(--ink-soft); padding-left: 18px; margin-top: 6px;">
+          <li>Environment Variables: <em class="italic">DATABASE_URL</em></li>
+          <li>Environment Variables: <em class="italic">AUTH_SECRET</em></li>
+          <li>Vercel Postgres 연결 상태</li>
+          <li>Production URL 클릭 → 가입·글쓰기 한 번</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="prompt-box" style="margin-top: 14px; font-size: 11.5px;">
+🌐 production URL 확보
+<em style="color:#B0C8B5;">https://my-cafe-&lt;user&gt;.vercel.app</em>
+
+<em style="color:#9CA89F;"># 이 URL이 다음 단계 (Google/Kakao OAuth) redirect URI의 기준점</em>
+    </div>
+
+    <div class="callout" style="margin-top: 12px;">
+      <div class="label">왜 OAuth 전에 배포부터</div>
+      <div class="text"><em class="italic accent-rust">OAuth 콘솔이 redirect URI를 요구</em>한다. 라이브 도메인이 없으면 Google/Kakao 등록 자체가 불가능. 그래서 배포 → OAuth 순서.</div>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="inner">
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · Google OAuth</span></div><div class="pagenum">72</div></div>
+    <div class="practice-meta">
+      <span class="pill" style="background: var(--forest); color: white;">Stage C · 확장</span>
+      <span class="pill tool">Google Cloud · Auth.js</span>
+    </div>
+    <h3 class="display" style="margin-bottom: 10px;">C-2 · Google 로그인 추가</h3>
+    <p class="body" style="color: var(--ink-soft); margin-bottom: 14px;">콘솔 작업은 사람이, 코드 변경은 Codex가 — <em class="italic">redirect URI</em>가 두 작업을 잇는 핵심</p>
+
+    <div class="grid-2" style="gap: 16px; flex: none;">
+      <div style="padding: 14px 18px; background: var(--paper-2); border-left: 3px solid var(--forest);">
+        <div class="eyebrow forest">사람 · Google Cloud Console</div>
+        <ul style="font-size: 12.5px; line-height: 1.7; color: var(--ink-soft); padding-left: 18px; margin-top: 6px;">
+          <li>프로젝트 생성 → <em class="italic">OAuth 동의 화면</em> (External · 앱 이름)</li>
+          <li>사용자 인증 정보 → <em class="italic">OAuth 2.0 클라이언트 ID</em> · Web application</li>
+          <li>승인된 JavaScript 출처<br><code style="font-family:var(--mono);font-size:11px;">https://my-cafe-&lt;user&gt;.vercel.app</code></li>
+          <li>승인된 리디렉션 URI<br><code style="font-family:var(--mono);font-size:11px;">…/api/auth/callback/google</code></li>
+          <li><em class="italic accent-rust">Client ID · Client Secret 복사</em></li>
+        </ul>
+      </div>
+      <div style="padding: 14px 18px; background: var(--paper-2); border-left: 3px solid var(--rust);">
+        <div class="eyebrow">Codex · 코드 변경</div>
+        <ul style="font-size: 12.5px; line-height: 1.7; color: var(--ink-soft); padding-left: 18px; margin-top: 6px;">
+          <li><em class="italic">src/auth.ts</em> — providers에 <em class="italic">Google</em> 추가</li>
+          <li><em class="italic">.env.example</em> — AUTH_GOOGLE_ID / SECRET 추가</li>
+          <li><em class="italic">/login 페이지</em> — "Google로 로그인" 버튼</li>
+          <li>Vercel 대시보드에서 두 환경변수 등록</li>
+          <li>커밋 → push → 자동 재배포</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="prompt-box" style="margin-top: 14px; font-size: 11.5px;">
+<span class="you">▶ Codex에게</span>
+"Auth.js에 Google provider를 추가해줘. AUTH_GOOGLE_ID / AUTH_GOOGLE_SECRET
+환경변수 쓰는 방식. /login 페이지에 Google 버튼도 붙이고
+.env.example도 갱신해줘. redirect URI는 NextAuth 기본 경로 그대로."
+
+<span class="ai">→ Codex</span>
+📝 src/auth.ts: providers에 Google() 추가
+📝 .env.example: AUTH_GOOGLE_ID= / AUTH_GOOGLE_SECRET= 라인 추가
+📝 src/app/login/page.tsx: signIn("google") 버튼 추가
+✅ 로컬은 SECRET 없이도 빌드는 통과 (런타임에만 필요)
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="inner">
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · Kakao OAuth</span></div><div class="pagenum">73</div></div>
+    <div class="practice-meta">
+      <span class="pill" style="background: var(--forest); color: white;">Stage C · 확장</span>
+      <span class="pill tool">Kakao Developers · Auth.js</span>
+    </div>
+    <h3 class="display" style="margin-bottom: 10px;">C-3 · Kakao 로그인 추가</h3>
+    <p class="body" style="color: var(--ink-soft); margin-bottom: 14px;">Google과 같은 패턴 — 콘솔에서 키 발급, Codex가 provider 추가. <em class="italic">국내 사용자엔 더 친숙</em></p>
+
+    <div class="grid-2" style="gap: 16px; flex: none;">
+      <div style="padding: 14px 18px; background: var(--paper-2); border-left: 3px solid var(--forest);">
+        <div class="eyebrow forest">사람 · Kakao Developers</div>
+        <ul style="font-size: 12.5px; line-height: 1.7; color: var(--ink-soft); padding-left: 18px; margin-top: 6px;">
+          <li><em class="italic">애플리케이션 추가</em> → 앱 생성</li>
+          <li>플랫폼 → <em class="italic">Web</em> 사이트 도메인 등록</li>
+          <li><em class="italic">카카오 로그인</em> 활성화 ON</li>
+          <li>Redirect URI 등록<br><code style="font-family:var(--mono);font-size:11px;">…/api/auth/callback/kakao</code></li>
+          <li>동의항목 — <em class="italic">닉네임 · 이메일</em></li>
+          <li><em class="italic accent-rust">REST API 키 + Client Secret</em> 발급</li>
+        </ul>
+      </div>
+      <div style="padding: 14px 18px; background: var(--paper-2); border-left: 3px solid var(--rust);">
+        <div class="eyebrow">Codex · 코드 변경</div>
+        <ul style="font-size: 12.5px; line-height: 1.7; color: var(--ink-soft); padding-left: 18px; margin-top: 6px;">
+          <li><em class="italic">src/auth.ts</em> — providers에 <em class="italic">Kakao</em> 추가</li>
+          <li><em class="italic">.env.example</em> — AUTH_KAKAO_ID / SECRET 추가</li>
+          <li><em class="italic">/login 페이지</em> — "카카오로 시작하기" 버튼</li>
+          <li>Vercel 환경변수 등록 (REST API 키 = ID)</li>
+          <li>커밋 → push → 자동 재배포</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="prompt-box" style="margin-top: 14px; font-size: 11.5px;">
+<span class="you">▶ Codex에게</span>
+"Auth.js에 Kakao provider도 추가해줘. Google이랑 같은 패턴.
+REST API 키를 AUTH_KAKAO_ID, Client Secret을 AUTH_KAKAO_SECRET으로.
+/login 페이지에 카카오 노란 버튼 — 가이드라인 색상(#FEE500) 사용."
+
+<span class="ai">→ Codex</span>
+📝 src/auth.ts: import Kakao from "next-auth/providers/kakao" + 추가
+📝 .env.example: AUTH_KAKAO_ID / AUTH_KAKAO_SECRET
+📝 /login: 카카오 버튼 (배경 #FEE500, 글자 #181600)
+✅ Google + Kakao + Credentials 3종 동시 사용 가능
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="inner">
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 재배포</span></div><div class="pagenum">74</div></div>
+    <div class="practice-meta">
+      <span class="pill" style="background: var(--forest); color: white;">Stage C · 확장</span>
+      <span class="pill tool">production 검증</span>
+    </div>
+    <h3 class="display" style="margin-bottom: 10px;">C-4 · OAuth 검증 + 재배포</h3>
+    <p class="body" style="color: var(--ink-soft); margin-bottom: 14px;">로컬이 아닌 <em class="italic">production URL에서 직접</em> 가입 흐름을 한 번씩 — secret을 코드에 안 흘렸는지 확인</p>
+
+    <div class="prompt-box" style="font-size: 11.5px;">
+<span class="you">▶ Vercel 환경변수 등록 (대시보드)</span>
+AUTH_GOOGLE_ID    = ...
+AUTH_GOOGLE_SECRET = ...
+AUTH_KAKAO_ID      = ...    <em style="color:#9CA89F;"># REST API 키</em>
+AUTH_KAKAO_SECRET  = ...
+<em style="color:#9CA89F;"># Production · Preview 모두 체크</em>
+
+<span class="you">▶ 푸시 → 자동 재배포</span>
+git push    <em style="color:#9CA89F;"># 빌드 끝나면 production URL 갱신</em>
+
+<span class="you">▶ production에서 사람 손으로 검증</span>
+🌐 https://my-cafe-&lt;user&gt;.vercel.app/login
+   ┣ Google 버튼 → 동의 → 가입 → 글쓰기 → 댓글 ✓
+   ┣ Kakao 버튼 → 동의 → 가입 → 같은 글에 댓글 ✓
+   ┗ 이메일 가입자와 OAuth 가입자가 같은 공간에서 활동
+    </div>
+
+    <div class="grid-2" style="gap: 14px; flex: none; margin-top: 12px;">
+      <div style="padding: 10px 14px; background: var(--paper-2); border-left: 3px solid var(--rust);">
+        <div class="eyebrow">보안 체크</div>
+        <p class="body sm" style="margin-top: 4px;">.env*가 <em class="italic">.gitignore</em>에 있는지 / Client Secret이 커밋 히스토리에 없는지 / Vercel env만 사용</p>
+      </div>
+      <div style="padding: 10px 14px; background: var(--paper-2); border-left: 3px solid var(--forest);">
+        <div class="eyebrow forest">Codex로 한 번 더</div>
+        <p class="body sm" style="margin-top: 4px;">"OAuth 셋업한 코드만 보안 리뷰해줘" — <em class="italic">scope, callback URL, secret 처리</em>에 집중한 review</p>
+      </div>
     </div>
   </div>
 </section>
@@ -2309,30 +2391,30 @@ codex    <em style="color:#9CA89F;"># Codex CLI 시작</em>
   <div class="inner">
     <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 회고</span></div><div class="pagenum">75</div></div>
     <div class="eyebrow">실습 회고</div>
-    <h2 class="display" style="margin-bottom: 18px;">두 도구 비교 + 다음 사이클</h2>
+    <h2 class="display" style="margin-bottom: 18px;">사전 보일러플레이트 + 멀티에이전트 + OAuth</h2>
     <div class="grid-2" style="gap: 22px;">
       <div style="padding: 22px 24px; background: var(--paper-2); border-top: 3px solid var(--forest);">
         <div class="eyebrow forest">잘 된 점</div>
         <ul style="font-size: 14px; line-height: 1.7; color: var(--ink-soft); padding-left: 18px; margin-top: 8px;">
-          <li>한 세션에 동작하는 앱 ✓</li>
-          <li>Claude · Codex 역할 분리로 컨텍스트 ↓</li>
-          <li>design.md → 일관된 UI ✓</li>
-          <li>배포까지 완료 ✓</li>
+          <li>한 세션에 동작하는 카페 게시판 ✓</li>
+          <li>사전 보일러플레이트로 워크샵 본론 집중</li>
+          <li>멀티에이전트 — 회원·글·댓글 병렬 구현</li>
+          <li>라이브 URL + Google·Kakao 로그인 2종 ✓</li>
         </ul>
       </div>
       <div style="padding: 22px 24px; background: var(--paper-2); border-top: 3px solid var(--rust);">
         <div class="eyebrow">개선 여지</div>
         <ul style="font-size: 14px; line-height: 1.7; color: var(--ink-soft); padding-left: 18px; margin-top: 8px;">
-          <li>예외 처리 평이함</li>
-          <li>실제 사용자 시나리오 부족</li>
-          <li>성능 최적화 미흡</li>
-          <li>다음: /cso로 보안 리뷰 추가</li>
+          <li>페이지네이션·검색 미흡</li>
+          <li>프로필 화면 / 이메일 인증 미적용</li>
+          <li>이미지 업로드는 다음 사이클</li>
+          <li>다음: /cso 보안 리뷰 · 알림 기능</li>
         </ul>
       </div>
     </div>
     <div class="callout" style="margin-top: 18px;">
       <div class="label">토큰 분포 (대략)</div>
-      <div class="text">Stage A · Claude Code (~3,000원) + Stage B · Codex (~1,500원) + Stitch (별도 · 무료) — <em class="italic accent-rust">크레딧 안에서 풀스택 배포까지</em>.</div>
+      <div class="text">사전 보일러플레이트 · Claude Code (~3,000원) + Codex 멀티에이전트 (~2,000원) + OAuth 추가 (~500원) — <em class="italic accent-rust">OAuth는 콘솔 작업이 90%, 코드는 자연어 한 줄</em>이라 토큰이 거의 안 든다.</div>
     </div>
   </div>
 </section>
@@ -2342,87 +2424,112 @@ codex    <em style="color:#9CA89F;"># Codex CLI 시작</em>
     <div class="strip invert"><div class="left"><span class="dot"></span><span>Module Six</span></div><div class="pagenum">76</div></div>
     <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
       <div class="divider-no">06</div>
-      <div class="divider-label">Part Six · 적용</div>
-      <h2 class="divider-title">내일부터 할 일</h2>
+      <div class="divider-label">Part Six · 현장 추가 실습</div>
+      <h2 class="divider-title">자유주제 개인 프로젝트</h2>
     </div>
   </div>
 </section>
 
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · 로드맵</span></div><div class="pagenum">77</div></div>
-    <div class="eyebrow">한 번에 모두 설치하지 마세요</div>
-    <h2 class="display" style="margin-bottom: 18px;">단계별 도입</h2>
-    <div class="num-list" style="flex: none; gap: 14px;">
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · 아이디어</span></div><div class="pagenum">77</div></div>
+    <div class="eyebrow">남은 시간에 끝낼 수 있을 만큼</div>
+    <h2 class="display" style="margin-bottom: 14px;">작게, 더 작게</h2>
+    <p class="body lg" style="color: var(--ink-soft); margin-bottom: 18px;">카페 게시판이 끝났으니 이제 자기 아이디어로 한 사이클 — <em class="italic">1개 핵심 기능</em>만</p>
+
+    <div class="grid-2" style="gap: 22px; flex: none;">
+      <div style="padding: 18px 22px; background: var(--paper-2); border-top: 3px solid var(--rust);">
+        <div class="eyebrow">scope 기준 — 통과해야 OK</div>
+        <ul style="font-size: 13.5px; line-height: 1.75; color: var(--ink-soft); padding-left: 18px; margin-top: 6px;">
+          <li>도메인 모델 <em class="italic">3개 이내</em></li>
+          <li>API 엔드포인트 <em class="italic">5개 이내</em></li>
+          <li>핵심 기능 한 문장으로 설명 가능</li>
+          <li><em class="italic accent-rust">남은 시간 안에 배포</em>까지 갈 수 있는가</li>
+        </ul>
+      </div>
+      <div style="padding: 18px 22px; background: var(--paper-2); border-top: 3px solid var(--forest);">
+        <div class="eyebrow forest">아이디어 힌트</div>
+        <ul style="font-size: 13.5px; line-height: 1.75; color: var(--ink-soft); padding-left: 18px; margin-top: 6px;">
+          <li>독서 노트 · 인용 모음</li>
+          <li>회의 타이머 + 발언 시간 측정</li>
+          <li>단축어 / 줄임말 사전</li>
+          <li>주간 회고 일지</li>
+          <li>팀 점심 메뉴 투표</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 18px;">
+      <div class="label">하지 말 것</div>
+      <div class="text"><em class="italic">"카페에 게시판 + 채팅 + 알림 + 이미지 업로드까지"</em> 같이 욕심 부리지 않기. <em class="italic accent-rust">카페 게시판 1개 기능만큼의 작은 도구</em>가 정답.</div>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="inner">
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · 보일러플레이트</span></div><div class="pagenum">78</div></div>
+    <div class="eyebrow">본 실습에선 받았고 — 이번엔 직접</div>
+    <h2 class="display" style="margin-bottom: 14px;">보일러플레이트부터 시작</h2>
+    <p class="body lg" style="color: var(--ink-soft); margin-bottom: 14px;">카페에선 Stage B부터 들어갔지만, 자유주제에선 <em class="italic accent-rust">Stage A를 직접</em> — Claude Code로 PRD부터 첫 배포까지</p>
+
+    <div class="num-list" style="flex: none; gap: 10px;">
       <div class="item">
         <div class="n">01</div>
         <div>
-          <div class="t"><strong>오늘 / 내일</strong> — CLAUDE.md 1개</div>
-          <div class="d">본인 메인 프로젝트에 5분짜리 CLAUDE.md. 일주일간 운영하며 한 줄씩 추가</div>
+          <div class="t"><strong>아이디어 → PRD</strong> · Claude Code 자연어 대화</div>
+          <div class="d">"X 만들 거야. Next.js + Prisma + Auth.js. 도메인은 ___, ___, ___." → prd.md</div>
         </div>
       </div>
       <div class="item">
         <div class="n">02</div>
         <div>
-          <div class="t"><strong>이번 주</strong> — Superpowers 설치</div>
-          <div class="d">TDD가 자동 발동되는지 관찰. 마음에 들면 다음 단계로</div>
+          <div class="t"><strong>보일러플레이트 빌드</strong> · Next.js + shadcn/ui + Prisma + Auth.js</div>
+          <div class="d">Claude가 web_search·bash·write로 한꺼번에 셋업. CLAUDE.md / AGENTS.md도 같이</div>
         </div>
       </div>
       <div class="item">
         <div class="n">03</div>
         <div>
-          <div class="t"><strong>이번 달</strong> — gstack 추가</div>
-          <div class="d">사이드 프로젝트 1개를 /plan부터 /ship까지 한 사이클 실행해보기</div>
+          <div class="t"><strong>DB · GitHub · Vercel</strong> · 첫 배포 (빈 화면이라도 OK)</div>
+          <div class="d">라이브 URL 확보가 핵심 — 나중에 OAuth redirect URI의 기준점</div>
         </div>
       </div>
       <div class="item">
         <div class="n">04</div>
         <div>
-          <div class="t"><strong>다음 분기</strong> — 팀 도입</div>
-          <div class="d">동료 1명과 워크플로우 표준화 시도. 사내 마켓플레이스 리포 시작</div>
+          <div class="t"><strong>같은 폴더에서 codex</strong> · Stage B로 진입</div>
+          <div class="d">/superpowers:write-plan → /execute-plan — 카페에서 익힌 그대로</div>
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-<section class="slide">
-  <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · 참고</span></div><div class="pagenum">78</div></div>
-    <div class="eyebrow">필요할 때 — 추가 도구</div>
-    <h3 class="display" style="margin-bottom: 18px;">한 단계 더 가고 싶다면</h3>
-    <table class="tbl">
-      <thead>
-        <tr><th>도구</th><th>용도</th><th>언제 도입</th></tr>
-      </thead>
-      <tbody>
-        <tr><td class="tool">claude-stack-plugin</td><td>Superpowers · gstack · 기타 통합</td><td>가장 종합적인 셋업 원할 때</td></tr>
-        <tr><td class="tool">Claude-Mem</td><td>세션 간 장기 메모리</td><td>긴 프로젝트 진행 시</td></tr>
-        <tr><td class="tool">code-review-graph</td><td>토큰 효율화 (모든 도구 가속)</td><td>비용이 부담스러울 때</td></tr>
-        <tr><td class="tool">KARIMO</td><td>PRD 자동 분해 · wave 실행</td><td>대규모 프로젝트</td></tr>
-        <tr><td class="tool">Agent Teams</td><td>Claude Code 내장 다중 세션</td><td>v2.1.139+ 업데이트 시</td></tr>
-        <tr><td class="tool">Cowork</td><td>비개발자용 자동화</td><td>비개발 직군 동료 합류 시</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<section class="slide">
-  <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · 챌린지</span></div><div class="pagenum">79</div></div>
-    <div class="eyebrow">워크숍 끝나고 — 1주일 챌린지</div>
-    <h2 class="display" style="margin-bottom: 14px;">본인 아이디어 1개를 풀스택으로</h2>
-    <p class="body lg" style="margin-bottom: 14px;">오늘 배운 그대로. <em class="italic accent-rust">/plan → /ship까지</em> 한 사이클. <em class="italic accent-rust">남은 예산으로 끝낼 수 있을 만큼 작게</em> 잡으세요.</p>
-    <div class="checklist">
-      <div class="row"><div class="mk">◆</div><div class="tx">D+1: 아이디어 1줄 결정 · <em>/plan</em></div></div>
-      <div class="row"><div class="mk">◆</div><div class="tx">D+2~3: <em>/build</em> · 골격 + 핵심 기능 1개</div></div>
-      <div class="row"><div class="mk">◆</div><div class="tx">D+4: Codex로 <em>/review</em> · 버그 fix</div></div>
-      <div class="row"><div class="mk">◆</div><div class="tx">D+5: <em>/ship</em> · Vercel 배포</div></div>
-      <div class="row"><div class="mk">◆</div><div class="tx">D+7: 동료와 회고 — 무엇이 잘 됐고 안 됐나</div></div>
-    </div>
     <div class="callout" style="margin-top: 14px;">
-      <div class="label">아이디어 힌트 (작게!)</div>
-      <div class="text">독서 노트 / 명함 페이지 / 회의 타이머 / 마크다운 메모 / 단축어 모음 — <em class="italic accent-rust">1개 핵심 기능만</em> 있는 작은 도구가 정답.</div>
+      <div class="label">왜 처음부터 직접</div>
+      <div class="text">카페에선 Stage A를 못 본 채 받았다. <em class="italic accent-rust">한 번은 직접 Claude Code의 보일러플레이트 빌드 흐름</em>을 경험해봐야 다음 프로젝트에 본인이 셋업할 수 있다.</div>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="inner">
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · 한 사이클</span></div><div class="pagenum">79</div></div>
+    <div class="eyebrow">남은 시간 안에 — 자기 아이디어를 production까지</div>
+    <h2 class="display" style="margin-bottom: 14px;">현장에서 한 사이클</h2>
+    <p class="body lg" style="margin-bottom: 14px;">Stage A부터 OAuth까진 못 가더라도 — <em class="italic accent-rust">아이디어 → 보일러플레이트 → 멀티에이전트 → 배포</em>까진 90분 안에</p>
+
+    <div class="checklist" style="flex: none;">
+      <div class="row"><div class="mk">◆</div><div class="tx"><strong>10분</strong> · 아이디어 1줄 + 도메인 3개 결정</div></div>
+      <div class="row"><div class="mk">◆</div><div class="tx"><strong>25분</strong> · Claude Code로 PRD · 보일러플레이트 빌드 · DB · 첫 배포</div></div>
+      <div class="row"><div class="mk">◆</div><div class="tx"><strong>5분</strong> · 같은 폴더에서 codex 시작 · <em>/superpowers:write-plan</em></div></div>
+      <div class="row"><div class="mk">◆</div><div class="tx"><strong>30분</strong> · <em>/execute-plan</em> 멀티에이전트 (그동안 자리 떠도 OK)</div></div>
+      <div class="row"><div class="mk">◆</div><div class="tx"><strong>15분</strong> · 로컬 사람 손 한 사이클 · 버그 fix · push · production 검증</div></div>
+      <div class="row"><div class="mk">◆</div><div class="tx"><strong>+α</strong> · 시간 남으면 Google/Kakao OAuth 추가</div></div>
+    </div>
+
+    <div class="callout" style="margin-top: 14px;">
+      <div class="label">막히면</div>
+      <div class="text">Stage A에서 멈춰도 충분히 의미 있음. <em class="italic accent-rust">완성품 1개 &gt; 미완성 3개</em> — Codex가 헛돌면 Plan Mode로 돌려놓고 PRD를 더 단순화.</div>
     </div>
   </div>
 </section>
