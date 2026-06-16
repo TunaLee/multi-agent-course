@@ -1749,13 +1749,7 @@ npm run dev · npm test · npx prisma migrate dev
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 평가</span></div><div class="pagenum">55</div></div>
-    <div class="practice-meta"><span class="pill">실습</span><span class="pill tool">결함 10개</span></div><h2 class="display" style="margin-bottom:6px;">심어둔 결함 10개로 측정</h2><p class="body" style="color:var(--ink-soft); margin-bottom:12px;">결함이 박힌 요청 관리 서비스를 클론해서, <em class="italic">/review로 몇 개나 잡히나</em> 회수율로 확인한다.</p><div class="prompt-box" style="margin:0 0 14px;"><span class="you">▶ git clone https://github.com/TunaLee/buggy-request.git</span>
-<span class="ai">결함 10개 — 인젝션 · 인가 · IDOR · off-by-one · 경쟁 · 상태 전이 · 대량 할당 · 오류 노출 · N+1 · await</span></div><div class="num-list" style="flex:none; gap:11px;"><div class="item"><div class="n">01</div><div><div class="t">/review 단독 → 회수율 기록</div><div class="d">잡은 결함을 적는다 — 보통 6~8/10, 순수 보안(인젝션·IDOR)은 자주 놓침</div></div></div><div class="item"><div class="n">02</div><div><div class="t">/cso 추가 → 재측정</div><div class="d">놓친 보안 결함 보강 → 9~10/10</div></div></div><div class="item"><div class="n">03</div><div><div class="t">테스트 · /qa로 확정</div><div class="d">off-by-one · 상태 전이 · 삭제 미반영 런타임 확인 → 10/10</div></div></div></div><div class="callout" style="margin-top:14px;"><div class="label">핵심</div><div class="text">단일 도구로 10/10은 어렵다 — <em class="italic accent-rust">/review + /cso + 테스트 조합.</em> 변수 하나만 바꿔(모델·단일↔멀티) 재측정하면 회수율 차이가 숫자로 보인다.</div></div></div>
-</section>
-<section class="slide">
-  <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 게이트 설계</span></div><div class="pagenum">56</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 게이트 설계</span></div><div class="pagenum">55</div></div>
     <div class="eyebrow">감이 아니라 리스크 등급으로</div>
     <h2 class="display" style="margin-bottom: 12px;">리스크에 비례한 검증 게이트</h2>
     <table class="tbl">
@@ -1771,7 +1765,7 @@ npm run dev · npm test · npx prisma migrate dev
 </section>
 <section class="slide layout-divider">
   <div class="inner">
-    <div class="strip invert"><div class="left"><span class="dot"></span><span>Module Five</span></div><div class="pagenum">57</div></div>
+    <div class="strip invert"><div class="left"><span class="dot"></span><span>Module Five</span></div><div class="pagenum">56</div></div>
     <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
       <div class="divider-no">05</div>
       <div class="divider-label">Part Five · 생태계</div>
@@ -1781,7 +1775,7 @@ npm run dev · npm test · npx prisma migrate dev
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 지형도</span></div><div class="pagenum">58</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 지형도</span></div><div class="pagenum">57</div></div>
     <div class="eyebrow">도구 분류 기준</div>
     <h2 class="display" style="margin-bottom: 6px;">멀티에이전트 도구 3분류</h2>
     <p class="body lg" style="color: var(--ink-soft); margin-bottom: 14px;">분류가 다르면 용도도 다름</p>
@@ -1806,7 +1800,7 @@ npm run dev · npm test · npx prisma migrate dev
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 판단</span></div><div class="pagenum">59</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 판단</span></div><div class="pagenum">58</div></div>
     <div class="eyebrow">직접 구성이 필요한 이유</div>
     <h2 class="display" style="margin-bottom: 6px;">설정 없이 맡기기 vs 직접 구성하기</h2>
     <p class="body lg" style="color: var(--ink-soft); margin-bottom: 14px;">같은 멀티에이전트 — 5가지 차이</p>
@@ -1825,7 +1819,7 @@ npm run dev · npm test · npx prisma migrate dev
 </section>
 <section class="slide">
 <div class="inner">
-<div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 플러그인</span></div><div class="pagenum">60</div></div>
+<div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 플러그인</span></div><div class="pagenum">59</div></div>
 <div class="eyebrow">플러그인 세션 · 왜 플러그인인가</div>
 <h2 class="display" style="margin-bottom: 6px;">키울 것은 모델이 아니라 하네스</h2>
 <p class="body lg" style="color: var(--ink-soft); margin-bottom: 16px;">같은 모델(Opus · Fable)이라도 결과는 <em class="italic accent-rust">하네스</em>가 가릅니다 — 지능을 올리는 게 아니라 <em class="italic">똑똑하게 일하는 구조</em>를 올리는 일.</p>
@@ -1846,7 +1840,7 @@ npm run dev · npm test · npx prisma migrate dev
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 생태계</span></div><div class="pagenum">61</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 생태계</span></div><div class="pagenum">60</div></div>
     <div class="eyebrow">Plugin Ecosystem · 2026</div>
     <h2 class="display" style="margin-bottom: 22px;">CLAUDE.md를 넘어, 플러그인 생태계</h2>
     <div class="grid-3" style="flex: none; gap: 14px;">
@@ -1874,7 +1868,7 @@ npm run dev · npm test · npx prisma migrate dev
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · Superpowers</span></div><div class="pagenum">62</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · Superpowers</span></div><div class="pagenum">61</div></div>
     <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 28px; padding-bottom: 18px; border-bottom: 1px solid var(--line);">
       <div>
         <div class="eyebrow">Plugin · 8개 플랫폼 호환</div>
@@ -1919,7 +1913,7 @@ npm run dev · npm test · npx prisma migrate dev
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · gstack</span></div><div class="pagenum">63</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · gstack</span></div><div class="pagenum">62</div></div>
     <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 22px; padding-bottom: 18px; border-bottom: 1px solid var(--line);">
       <div>
         <div class="eyebrow">Plugin · Claude Code 전용</div>
@@ -1957,13 +1951,14 @@ git clone --single-branch --depth 1 \
 /plan-ceo-review        <em style="color:#9CA89F;"># CEO — 제품 스코프 결정</em>
 /plan-eng-review        <em style="color:#9CA89F;"># EM — 아키텍처 검토</em>
 /autoplan               <em style="color:#9CA89F;"># CEO + 디자인 + 엔지니어링 검토 자동</em>
-/cso  ·  /qa  ·  /ship  ·  /retro
+/cso                    <em style="color:#9CA89F;"># 보안 전담 점검 — CSO 페르소나</em>
+/qa  ·  /ship  ·  /retro <em style="color:#9CA89F;"># 검증 · 릴리스 · 회고</em>
     </div>
   </div>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 비교</span></div><div class="pagenum">64</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 비교</span></div><div class="pagenum">63</div></div>
     <div class="eyebrow">Superpowers vs gstack — 성격이 다르다</div>
     <h2 class="display" style="margin-bottom: 12px;">방법론을 코드로 강제 <span style="color:var(--muted); font-weight:400; font-style:italic;">vs</span> 가상 개발 팀</h2>
 
@@ -2023,6 +2018,12 @@ git clone --single-branch --depth 1 \
 </section>
 <section class="slide">
   <div class="inner">
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 04 · 평가</span></div><div class="pagenum">64</div></div>
+    <div class="practice-meta"><span class="pill">실습</span><span class="pill tool">숨은 결함</span></div><h2 class="display" style="margin-bottom:6px;">심어둔 결함 찾기</h2><p class="body" style="color:var(--ink-soft); margin-bottom:12px;">결함이 박힌 요청 관리 서비스를 클론해서, <em class="italic">/review로 몇 개나 잡히나</em> 회수율로 확인한다.</p><div class="prompt-box" style="margin:0 0 14px;"><span class="you">▶ git clone https://github.com/TunaLee/buggy-request.git</span>
+<span class="ai">곳곳에 결함이 숨어 있다 — 보안 · 로직 · 런타임</span></div><div class="num-list" style="flex:none; gap:11px;"><div class="item"><div class="n">01</div><div><div class="t">/review 단독 → 회수율 기록</div><div class="d">찾은 결함 수를 적는다</div></div></div><div class="item"><div class="n">02</div><div><div class="t">/cso 추가 → 재측정</div><div class="d">보안 특화 점검을 더해 다시 측정 — 회수율 변화 확인</div></div></div><div class="item"><div class="n">03</div><div><div class="t">테스트 · /qa 추가 → 재측정</div><div class="d">런타임에서만 드러나는 결함(off-by-one · 상태 전이 · 삭제 미반영)을 테스트·/qa로 확인 → 다시 측정</div></div></div></div><div class="callout" style="margin-top:14px;"><div class="label">핵심</div><div class="text">어떤 도구·조합이 회수율을 끌어올리는지는 직접 측정해 비교한다 — <em class="italic accent-rust">/review, +/cso, +테스트·/qa</em> 로 변수를 하나씩만 바꿔 재측정하면 차이가 숫자로 드러난다.</div></div></div>
+</section>
+<section class="slide">
+  <div class="inner">
     <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 관찰</span></div><div class="pagenum">65</div></div>
     <div class="eyebrow">실행 ≠ 관찰</div>
     <h2 class="display" style="margin-bottom: 6px;">실행과 관찰의 분리</h2>
@@ -2054,7 +2055,20 @@ git clone --single-branch --depth 1 \
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 동향</span></div><div class="pagenum">66</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 실습</span></div><div class="pagenum">66</div></div>
+    <div class="practice-meta"><span class="pill">실습</span><span class="pill tool">lazyagent</span></div>
+    <h2 class="display" style="margin-bottom:6px;">lazyagent로 서브에이전트 트리 관찰</h2>
+    <p class="body" style="color:var(--ink-soft); margin-bottom:12px;">멀티에이전트가 실제로 뭘 했는지 — 누가 누구를 띄웠고 어떤 도구를 썼는지 터미널 TUI에서 본다.</p>
+    <div class="prompt-box" style="margin:0 0 14px;"><span class="you">▶ brew install --cask lazyagent</span> <span class="ai"># 또는 go install …@latest</span>
+<span class="you">▶ lazyagent init claude</span> <span class="ai"># Claude 훅 등록 (PreToolUse·SubagentStop…)</span>
+<span class="you">▶ lazyagent</span> <span class="ai"># TUI → 패널 3 "Agents/subagents"</span></div>
+    <div class="num-list" style="flex:none; gap:11px;"><div class="item"><div class="n">01</div><div><div class="t">멀티에이전트 작업 실행</div><div class="d">훅 등록 후 — 예: /review + /cso(결함 잡기) 또는 Supervisor·Fan-out</div></div></div><div class="item"><div class="n">02</div><div><div class="t">패널 3에서 트리 확인</div><div class="d">누가 누구를 spawn했나 — 서브에이전트 계층이 트리로 표시</div></div></div><div class="item"><div class="n">03</div><div><div class="t">노드별 상세 · 토큰</div><div class="d">패널 4·5의 도구·프롬프트·출력 + 세션 요약의 토큰 분해</div></div></div></div>
+    <div class="callout" style="margin-top:14px;"><div class="label">핵심</div><div class="text">실행(플러그인)과 관찰(lazyagent)은 분리 — <em class="italic accent-rust">트리로 "왜 빗나갔나"를 사후 로그가 아니라 그 자리에서.</em></div></div>
+  </div>
+</section>
+<section class="slide">
+  <div class="inner">
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 05 · 동향</span></div><div class="pagenum">67</div></div>
     <div class="eyebrow">변하는 것과 오래 남는 것</div>
     <h2 class="display" style="margin-bottom: 6px;">자동화될 영역 · 사람의 영역</h2>
     <div class="compare" style="margin-top: 10px;">
@@ -2082,7 +2096,7 @@ git clone --single-branch --depth 1 \
 </section>
 <section class="slide layout-divider">
   <div class="inner">
-    <div class="strip invert"><div class="left"><span class="dot"></span><span>Module Six</span></div><div class="pagenum">67</div></div>
+    <div class="strip invert"><div class="left"><span class="dot"></span><span>Module Six</span></div><div class="pagenum">68</div></div>
     <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
       <div class="divider-no">06</div>
       <div class="divider-label">Part Six · 메인 실습</div>
@@ -2092,7 +2106,7 @@ git clone --single-branch --depth 1 \
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · 프레이밍</span></div><div class="pagenum">68</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · 프레이밍</span></div><div class="pagenum">69</div></div>
     <div class="eyebrow">이 실습의 목표</div>
     <h2 class="display" style="margin-bottom: 14px;">빠른 구현과 검증 통제</h2>
     <div class="num-list" style="flex:none; gap:14px;">
@@ -2105,7 +2119,7 @@ git clone --single-branch --depth 1 \
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · 프로젝트</span></div><div class="pagenum">69</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · 프로젝트</span></div><div class="pagenum">70</div></div>
     <div class="eyebrow">단일 프로젝트 — 모두 동일</div>
     <h2 class="display" style="margin-bottom: 6px;">사내 요청 관리 도구</h2>
     <p class="body lg" style="margin-bottom: 14px;">한 세션 안에 <em class="italic">CRUD · 승인 흐름 · 역할 권한</em>까지 만든다.</p>
@@ -2133,7 +2147,7 @@ git clone --single-branch --depth 1 \
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · Stage A</span></div><div class="pagenum">70</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · Stage A</span></div><div class="pagenum">71</div></div>
     <div class="eyebrow">Stage A · 사전 제작</div>
     <h2 class="display" style="margin-bottom: 6px;">보일러플레이트 + 인스턴스</h2>
     <p class="body lg" style="margin-bottom: 14px;">공통 뼈대를 한 번 만들어 <em class="italic">어떤 사내 도구에도 재사용</em>한다.</p>
@@ -2162,7 +2176,7 @@ git clone --single-branch --depth 1 \
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · Stage B · 인수인계</span></div><div class="pagenum">71</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · Stage B · 인수인계</span></div><div class="pagenum">72</div></div>
     <div class="eyebrow">Stage B · Codex + Superpowers</div>
     <h2 class="display" style="margin-bottom: 6px;">B-1 · 인수인계</h2>
     <p class="body lg" style="margin-bottom: 10px;">같은 폴더에서 <em class="italic">codex</em>를 실행하면 AGENTS.md · prd.md · 스키마를 자동 인수한다.</p>
@@ -2177,7 +2191,7 @@ codex
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · Stage B · 플랜</span></div><div class="pagenum">72</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · Stage B · 플랜</span></div><div class="pagenum">73</div></div>
     <div class="eyebrow">/superpowers:write-plan</div>
     <h2 class="display" style="margin-bottom: 6px;">B-2 · 작업 분해</h2>
     <p class="body lg" style="margin-bottom: 10px;">prd.md와 스키마로 <em class="italic">IMPL_PLAN.md</em>를 만들고, 각 chunk를 sub-agent 한 명에게 맡긴다.</p>
@@ -2193,7 +2207,7 @@ codex
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · Stage B · 병렬 실행</span></div><div class="pagenum">73</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · Stage B · 병렬 실행</span></div><div class="pagenum">74</div></div>
     <div class="eyebrow">/superpowers:execute-plan</div>
     <h2 class="display" style="margin-bottom: 6px;">B-3 · 멀티에이전트 병렬 실행</h2>
     <p class="body lg" style="margin-bottom: 10px;">한 명령으로 sub-agent들을 병렬 실행하고, <em class="italic">chunk마다 RED→GREEN TDD</em>를 적용한다.</p>
@@ -2208,7 +2222,7 @@ codex
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · Stage B · 검증</span></div><div class="pagenum">74</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · Stage B · 검증</span></div><div class="pagenum">75</div></div>
     <div class="eyebrow">로컬 검증 + 커밋</div>
     <h2 class="display" style="margin-bottom: 6px;">B-4 · 한 사이클 직접 돌려보기</h2>
     <p class="body lg" style="margin-bottom: 10px;">결과물을 <em class="italic">사람이 직접 한 사이클</em> 사용해 본다 (요청 → 승인 → 코멘트).</p>
@@ -2224,7 +2238,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · 배포·인증</span></div><div class="pagenum">75</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · 배포·인증</span></div><div class="pagenum">76</div></div>
     <div class="eyebrow">Stage C · 환경 종속 영역</div>
     <h2 class="display" style="margin-bottom: 14px;">배포·인증 — 사내 환경에 종속</h2>
     <div class="compare">
@@ -2242,7 +2256,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · 회고</span></div><div class="pagenum">76</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 06 · 회고</span></div><div class="pagenum">77</div></div>
     <div class="eyebrow">실습 회고</div>
     <h2 class="display" style="margin-bottom: 14px;">사전 보일러플레이트 + 멀티에이전트</h2>
     <div class="compare">
@@ -2269,7 +2283,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide layout-divider">
   <div class="inner">
-    <div class="strip invert"><div class="left"><span class="dot"></span><span>Module Seven</span></div><div class="pagenum">77</div></div>
+    <div class="strip invert"><div class="left"><span class="dot"></span><span>Module Seven</span></div><div class="pagenum">78</div></div>
     <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
       <div class="divider-no">07</div>
       <div class="divider-label">Part Seven · 적용</div>
@@ -2279,7 +2293,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 아이디어</span></div><div class="pagenum">78</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 아이디어</span></div><div class="pagenum">79</div></div>
     <div class="practice-meta">
       <span class="pill">현장 실습</span>
       <span class="pill tool">자유주제 · Stage A부터</span>
@@ -2316,7 +2330,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 워크시트</span></div><div class="pagenum">79</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 워크시트</span></div><div class="pagenum">80</div></div>
     <div class="eyebrow">빌드 전 3분</div>
     <h2 class="display" style="margin-bottom: 6px;">위임 계약서 워크시트</h2>
     <p class="body lg" style="color: var(--ink-soft); margin-bottom: 14px;">5칸이 채워져야 위임이 성립</p>
@@ -2334,7 +2348,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 보일러플레이트</span></div><div class="pagenum">80</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 보일러플레이트</span></div><div class="pagenum">81</div></div>
     <div class="practice-meta">
       <span class="pill">현장 실습</span>
       <span class="pill tool">Stage A · 직접 빌드</span>
@@ -2380,7 +2394,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 한 사이클</span></div><div class="pagenum">81</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 한 사이클</span></div><div class="pagenum">82</div></div>
     <div class="practice-meta">
       <span class="pill">현장 실습</span>
       <span class="pill tool">Stage A → B → 배포</span>
@@ -2410,7 +2424,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 레거시</span></div><div class="pagenum">82</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 레거시</span></div><div class="pagenum">83</div></div>
     <div class="eyebrow">기존 코드에 적용하기</div>
     <h2 class="display" style="margin-bottom: 6px;">레거시 적용 4단계 — 위험 낮은 순서</h2>
     <p class="body lg" style="color: var(--ink-soft); margin-bottom: 14px;">신규 프로젝트가 아니라 운영 중인 코드</p>
@@ -2424,7 +2438,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 레거시</span></div><div class="pagenum">83</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 레거시</span></div><div class="pagenum">84</div></div>
     <div class="eyebrow">레거시 1단계 핵심 기술</div>
     <h2 class="display" style="margin-bottom: 6px;">Characterization Test — 현재 동작 그대로 고정</h2>
     <p class="body lg" style="color: var(--ink-soft); margin-bottom: 14px;">동작 사양을 모르는 코드의 안전망</p>
@@ -2450,7 +2464,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 레거시</span></div><div class="pagenum">84</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 레거시</span></div><div class="pagenum">85</div></div>
     <div class="eyebrow">거대 코드베이스 × 컨텍스트</div>
     <h2 class="display" style="margin-bottom: 6px;">레거시 컨텍스트 전략</h2>
     
@@ -2464,7 +2478,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 팀 협업</span></div><div class="pagenum">85</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 팀 협업</span></div><div class="pagenum">86</div></div>
     <div class="eyebrow">흔한 오해</div>
     <h2 class="display" style="margin-bottom: 6px;">Worktree — 개인의 병렬 도구</h2>
     <p class="body lg" style="color: var(--ink-soft); margin-bottom: 14px;">팀원 간 협업은 기존 git 규율로 충분</p>
@@ -2484,7 +2498,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 팀 협업</span></div><div class="pagenum">86</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 팀 협업</span></div><div class="pagenum">87</div></div>
     <div class="eyebrow">팀 협업 = 설정 공유</div>
     <h2 class="display" style="margin-bottom: 6px;">에이전트 설정 공유 — git 포함 · 제외</h2>
     
@@ -2504,7 +2518,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · MCP</span></div><div class="pagenum">87</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · MCP</span></div><div class="pagenum">88</div></div>
     <div class="eyebrow">내 업무 시스템 연결</div>
     <h2 class="display" style="margin-bottom: 6px;">MCP — 사내 시스템 연동</h2>
     
@@ -2523,7 +2537,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · CI</span></div><div class="pagenum">88</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · CI</span></div><div class="pagenum">89</div></div>
     <div class="eyebrow">PR 자동 리뷰</div>
     <h2 class="display" style="margin-bottom: 6px;">리뷰 파이프라인을 CI에 연결</h2>
     
@@ -2544,7 +2558,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 비용</span></div><div class="pagenum">89</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 비용</span></div><div class="pagenum">90</div></div>
     <div class="eyebrow">2026년 6월 기준 토큰당 가격</div>
     <h2 class="display" style="margin-bottom: 18px;">각 모델의 가격과 특성</h2>
     <table class="tbl">
@@ -2587,7 +2601,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 모델 선택</span></div><div class="pagenum">90</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 모델 선택</span></div><div class="pagenum">91</div></div>
     <div class="eyebrow">실전 팁 · 모델 라우팅</div>
     <h2 class="display" style="margin-bottom: 18px;">싼 모델 기본 · 비싼 모델은 필요 시</h2>
 
@@ -2624,7 +2638,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 실전 팁</span></div><div class="pagenum">91</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 실전 팁</span></div><div class="pagenum">92</div></div>
     <div class="eyebrow">실전 팁 · Plan Mode</div>
     <h2 class="display" style="margin-bottom: 14px;">Plan Mode — <em class="italic accent-rust">거의 무료</em></h2>
     <p class="body lg" style="margin-bottom: 14px;">Plan Mode는 <em class="italic">읽기 전용 + 짧은 산출물</em>입니다. 입력 토큰만 발생하고, 출력은 계획서 한 장. <em class="italic accent-rust">출력 토큰 부담이 현저히 적습니다</em>.</p>
@@ -2653,7 +2667,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 함정</span></div><div class="pagenum">92</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 함정</span></div><div class="pagenum">93</div></div>
     <div class="eyebrow">자주 빠지는 함정 5가지</div>
     <h2 class="display" style="margin-bottom: 14px;">멀티 에이전트 ≠ 만능</h2>
     <div class="checklist">
@@ -2667,7 +2681,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 도입</span></div><div class="pagenum">93</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · 도입</span></div><div class="pagenum">94</div></div>
     <div class="eyebrow">교육 → 도입</div>
     <h2 class="display" style="margin-bottom: 6px;">도입 로드맵 — 파일럿 → 측정 → 확산</h2>
     
@@ -2681,7 +2695,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · FAQ</span></div><div class="pagenum">94</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Part 07 · FAQ</span></div><div class="pagenum">95</div></div>
     <div class="eyebrow">도입 논의 시 자주 나오는 질문</div>
     <h2 class="display" style="margin-bottom: 6px;">예상 질문 3가지 — 답변</h2>
     
@@ -2694,7 +2708,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>Q &amp; A</span></div><div class="pagenum">95</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>Q &amp; A</span></div><div class="pagenum">96</div></div>
     <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
       <h1 class="cover-title" style="font-size: 120px; margin-bottom: 18px;">Q &amp; A</h1>
       <div class="cover-rule" style="max-width: 240px; margin-bottom: 22px;"></div>
@@ -2716,7 +2730,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide layout-divider">
   <div class="inner">
-    <div class="strip invert"><div class="left"><span class="dot"></span><span>Appendix</span></div><div class="pagenum">97</div></div>
+    <div class="strip invert"><div class="left"><span class="dot"></span><span>Appendix</span></div><div class="pagenum">98</div></div>
     <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
       <div class="divider-no">A</div>
       <div class="divider-label">Appendix · 부록</div>
@@ -2727,7 +2741,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>부록 · 기초 01</span></div><div class="pagenum">98</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>부록 · 기초 01</span></div><div class="pagenum">99</div></div>
     <div class="eyebrow">기초 01 · AI 모델</div>
     <h2 class="display" style="margin-bottom: 6px;">AI 모델</h2>
     <p class="body lg" style="color: var(--ink-soft); margin-bottom: 14px;">입력을 받아 결과를 내는 학습된 상자</p>
@@ -2739,7 +2753,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>부록 · 기초 01 · LLM</span></div><div class="pagenum">99</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>부록 · 기초 01 · LLM</span></div><div class="pagenum">100</div></div>
     <div class="eyebrow">기초 01 · LLM</div>
     <h2 class="display" style="margin-bottom: 6px;">LLM</h2>
     <p class="body lg" style="color: var(--ink-soft); margin-bottom: 18px;">Large Language Model — 텍스트를 다루는 AI 모델</p>
@@ -2768,7 +2782,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>부록 · 기초 02</span></div><div class="pagenum">100</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>부록 · 기초 02</span></div><div class="pagenum">101</div></div>
     <div class="eyebrow">기초 02 · 모델의 한계</div>
     <h2 class="display" style="margin-bottom: 6px;">모델의 한계</h2>
     <p class="body lg" style="color: var(--ink-soft); margin-bottom: 14px;">능력의 벽 · 신뢰의 벽</p>
@@ -2796,7 +2810,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>부록 · 기초 03</span></div><div class="pagenum">101</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>부록 · 기초 03</span></div><div class="pagenum">102</div></div>
     <div class="eyebrow">기초 03 · 에이전트</div>
     <h2 class="display" style="margin-bottom: 6px;">에이전트</h2>
     <p class="body lg" style="color: var(--ink-soft); margin-bottom: 18px;">목적을 부여받은 모델 — 스스로 계획하고 실행</p>
@@ -2824,7 +2838,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>부록 · 기초 03 · 작동</span></div><div class="pagenum">102</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>부록 · 기초 03 · 작동</span></div><div class="pagenum">103</div></div>
     <div class="eyebrow">기초 03 · 에이전트 · 작동</div>
     <h2 class="display" style="margin-bottom: 6px;">에이전트의 작동</h2>
     <p class="body lg" style="color: var(--ink-soft); margin-bottom: 14px;">이해 → 계획 → 실행 → 평가 → 응답</p>
@@ -2836,7 +2850,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>부록 · 기초 04 · 비유</span></div><div class="pagenum">103</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>부록 · 기초 04 · 비유</span></div><div class="pagenum">104</div></div>
     <div class="eyebrow">기초 04 · RAG · 비유</div>
     <h2 class="display" style="margin-bottom: 6px;">RAG</h2>
     <p class="body lg" style="color: var(--ink-soft); margin-bottom: 14px;">백과사전 비유</p>
@@ -2848,7 +2862,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>부록 · 기초 04</span></div><div class="pagenum">104</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>부록 · 기초 04</span></div><div class="pagenum">105</div></div>
     <div class="eyebrow">기초 04 · RAG</div>
     <h2 class="display" style="margin-bottom: 14px;">RAG — Retrieval-Augmented Generation</h2>
 
@@ -2859,7 +2873,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>부록 · 기초 04 · 종합</span></div><div class="pagenum">105</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>부록 · 기초 04 · 종합</span></div><div class="pagenum">106</div></div>
     <div class="eyebrow">기초 04 · RAG · 종합</div>
     <h2 class="display" style="margin-bottom: 6px;">코드 에이전트 RAG</h2>
     <p class="body lg" style="color: var(--ink-soft); margin-bottom: 10px;">전체 아키텍처</p>
@@ -2873,7 +2887,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>부록 · 기능별 명령</span></div><div class="pagenum">106</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>부록 · 기능별 명령</span></div><div class="pagenum">107</div></div>
     <div class="eyebrow">Superpowers · gstack</div>
     <h2 class="display" style="margin-bottom: 4px;">기능별</h2>
     <p style="color: var(--muted); margin-bottom: 10px; font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.08em;"><span style="color: var(--rust);">github.com/obra/superpowers</span> <span style="color:var(--muted);"> · </span> <span style="color: var(--forest);">github.com/garrytan/gstack</span></p>
@@ -2973,7 +2987,7 @@ npm run dev   <span class="ai"># http://localhost:3000</span>
 </section>
 <section class="slide">
   <div class="inner">
-    <div class="strip"><div class="left"><span class="dot"></span><span>부록 · 활성화 메커니즘</span></div><div class="pagenum">107</div></div>
+    <div class="strip"><div class="left"><span class="dot"></span><span>부록 · 활성화 메커니즘</span></div><div class="pagenum">108</div></div>
     <div class="eyebrow">Plugin Ecosystem · 활성화</div>
     <h2 class="display" style="margin-bottom: 6px;">Plugin <span style="color:var(--muted); font-weight:400;">·</span> Slash <span style="color:var(--muted); font-weight:400;">·</span> Skill <span style="color:var(--muted); font-weight:400;">·</span> Hook</h2>
     <p class="lead" style="margin-bottom: 18px;"><em class="italic accent-rust">명시 2단</em> <span style="color:var(--muted);"> · </span> <em class="italic accent-forest">자동 2단</em></p>
